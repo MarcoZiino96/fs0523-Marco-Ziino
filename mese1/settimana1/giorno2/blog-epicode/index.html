@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <meta name="description" content="Primi passi operativi per creare un modello di pagina HTML per un post.Scopri come iniziare in modo facile">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sviluppo di una pagina web-Blog Epicode</title>
-    <style> td{text-align: center;}</style>
-</head>
+    </head>
+        
 
 <body>
+
+  <div class="conteiner">
 
     <header>
         <img src="assets/assets/img/logo.svg" alt="">
@@ -16,26 +22,30 @@
        
     </header>
 
-    <nav>
-        <div>
+    
+    <nav id="navigation">
+       
+        <div class="text-navigation">
+            
             <a href="#">
             Home
             </a>
         </div>
 
-        <div>
+        <div class="text-navigation"> 
             <a href="#">
             Articoli
             </a>
+           
         </div>
 
-        <div>
+        <div class="text-navigation">
             <a href="#">
             Lavora con noi
             </a>
         </div>
     </nav>
-
+    
     <main>
         
         <section>
@@ -47,12 +57,12 @@
             </p>
         </section>
 
-        <section>
-            <p>
+        <section class="list-u">
+            <p class="text-ptitle">
                 La prima cosa da fare è suddividere in blocchi logici la pagina,
                 identificando le parti comuni da applicare a tutte le pagine
             </p>
-            <p>
+            <p class="list">
                 Le varie aree saranno quindi suddivise in:
             </p>
             <ul>
@@ -62,11 +72,11 @@
             </ul>
         </section>
            
-        <section>
-            <p>
+        <section class="list-o">
+            <p class="text-ptitle">
                 Formattazione del codice
             </p>
-            <p>
+            <p class="list">
                 Il testo dell'articolo dovrà essere formattato per identificare tutte
                 le parti da selezionare con i CSS.Perciò i passi saranno:
             </p>
@@ -78,7 +88,7 @@
         </section>
 
         <section>
-            <p>
+            <p class="text-ptitle">
                 Lapplicazione di stili CSS è cresciuta negli anni 
                 fino a raggiungere la diffusione pressochè totale.
             </p>
@@ -123,7 +133,7 @@
 
                 </tbody>
             </table>
-            <p>
+            <p class="last-p">
                     Il test di validazione potrà essere fatto tramite un tool online 
                 <a href="#">
                     LINK ESTERNO
@@ -131,7 +141,7 @@
                     dedicato allo scopo.Una volta ottimizzato il tutto,<br>avremmo raggiunto il nostro obbiettivo
                     ed essere stati dei veri e propri developers come loro:
             </p>
-            <iframe width="560" height="315"
+            <iframe 
              src="https://www.youtube.com/embed/Q4iH7Yk0eT8?si=641AhC55jXXc2mKM"
               title="YouTube video player" frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
@@ -141,11 +151,11 @@
     </main>
 
     <form >
-        <p>
+        <p class="last-p">
             Vuoi rimare aggiornato su altre novità del blog?Iscriviti alla newsletter:
         </p>
         <div>
-            <input type="email" required placeholder="Inserisci la tu email">  
+            <input id="size-i"  type="email" required placeholder="Inserisci la tu email">  
         </div>
         <button>Iscriviti</button>
     </form>
@@ -169,7 +179,7 @@
              Data 18-09-2020
          </p>   
     </Aside>
-    
+  </div>  
     <footer>
        <p> 
           Blog epicode &copy; 2023
@@ -183,6 +193,13 @@
     
 </body>
 </html>
+
+    
+    
+       
+
+
+    
            
 
 
