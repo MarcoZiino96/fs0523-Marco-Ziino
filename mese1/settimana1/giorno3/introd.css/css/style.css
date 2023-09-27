@@ -20,8 +20,7 @@ main{
 }
 
 .sec-uno{
-    text-align: center;
-    height:60%;
+    text-align: center;   
 }
 
 .text-head{
@@ -53,9 +52,13 @@ main{
     margin-bottom: 15px;    
 }
 
-.text-p{
-    text-align: center;
+.post-imagine{
     color: rgb(121, 115, 115);
+}
+
+.post-imagine img{
+    width: 80%;
+    border-radius:20px;
 }
 
 .under-text-uno{
