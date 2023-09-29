@@ -42,7 +42,10 @@ header{
     padding:30px 60px;
     background-color:black;
     font-family: 'Montserrat', sans-serif;
+}
 
+#logo img{
+    height: 50px;
 }
 
 .item-section1{
