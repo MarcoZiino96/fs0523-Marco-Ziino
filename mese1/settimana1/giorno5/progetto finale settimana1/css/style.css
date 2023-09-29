@@ -1,1 +1,158 @@
-/* Your styles here */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    background-color: #393d41;
+    font-size: 1.2rem;
+    line-height: 1.65rem;
+    text-align: center;
+    font-family: 'Open Sans',sans-serif;
+      
+}
+
+h1, .title-3{
+    color:#25a2c3;
+}
+
+.title-3{
+    font-size: 1.1rem;
+    padding:10px 0;
+    font-weight: 700;
+}
+
+p{
+    font-size: 1rem;
+    padding-bottom: 10px;
+    
+}
+
+h1{
+    font-size: 2.5rem;
+    line-height: 1.5rem;
+    padding-bottom: 20px;
+    font-weight:700;
+}
+
+h2{
+    font-size:1.5rem;
+    font-weight: 700;
+}
+
+header{
+    padding:30px 60px;
+    background-color:black;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.item-section1{
+    height: 300px;
+    padding: 60px 20px;
+    background-image:url(../images/banner.jpg);
+    background-size: cover;
+}
+
+.item-section1 p{
+    padding-bottom:40px;
+}
+
+
+.item-section1 a{
+    font-size: 1rem;
+    color:white;
+    padding: 10px 30px;
+    border-radius: 5px ;
+    background-color:#e22d0e;
+    text-decoration: none;
+}
+
+.section.two{
+    background-color: white;
+}
+
+.img-circle img{
+    border-radius: 100%;
+}
+   
+
+.item{
+    color: white;
+}
+
+.item.end-section{
+    padding: 50px 15px 15px 15px;
+    background-color: #e22d0e;
+}
+
+
+.item.end-section p{
+    font-size:0.8rem;
+}
+
+
+#text-end-section{
+    font-size: 1rem;
+    padding:20px 0;
+}
+
+.section.two, section.three{
+    background-color: white;
+    padding-top: 60px;
+}
+
+.container-article{
+    background-color: white;
+    padding: 60px 30px;
+} 
+
+article{
+    border: 1px solid #dee1e3;
+    margin-bottom: 30px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+
+}
+
+.article{
+    height:300px;
+}
+
+.text-article{
+    padding: 0 20px 45px 20px;   
+}
+
+.article.img1{
+    background-image:url(../images/foto1.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+.article.img2{
+    background-image:url(../images/foto2.jpg);
+    background-size:cover;
+    background-position: center;
+}
+.article.img3{
+    background-image:url(../images/foto3.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+footer{
+    background: #25a2c3;
+    padding: 40px 20px 40px 20px;
+}
+
+ .item.footer a{
+    color:white;
+    text-decoration: underline;
+}
+
+.contatti{
+    padding:20px 0;
+}
+   
+
+
+
