@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 body{
-    margin: 0 auto;
     background-color: #393d41;
     font-size: 1.2rem;
     line-height: 1.65rem;
@@ -57,7 +56,6 @@ header{
     padding-bottom:40px;
 }
 
-
 .item-section1 a{
     font-size: 1rem;
     color:white;
@@ -76,7 +74,7 @@ header{
 }
    
 
-.item{
+.item, .item a{
     color: white;
 }
 
@@ -144,13 +142,22 @@ footer{
     padding: 40px 20px 40px 20px;
 }
 
- .item.footer a{
-    color:white;
-    text-decoration: underline;
+#contatti{
+    padding:20px 0;
 }
 
-.contatti{
-    padding:20px 0;
+.item.footer p{
+    font-size: 0.8rem;
+    padding-top:20px;
+}
+.fa-phone-square-alt, 
+.fa-envelope-square, 
+.fa-external-link-square-alt {
+
+    font-size : 20px;
+}
+hr{
+    width: 230px;
 }
    
 
