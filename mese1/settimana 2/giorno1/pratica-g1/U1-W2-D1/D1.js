@@ -77,6 +77,13 @@ name1="john";
  console.log(name1 , name2);
 console.log(name1 === name2);
 console.log(name1 === name2.toLowerCase());
+ let number3; let number4;
+ number4=12;
+ number5=13;
+ console.log(number4, number5)
+ number4++ ;
+ console.log(number4 === number5);
+ 
 
 
 
