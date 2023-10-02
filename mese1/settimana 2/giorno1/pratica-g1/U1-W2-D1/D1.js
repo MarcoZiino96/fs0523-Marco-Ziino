@@ -74,9 +74,9 @@ console.log(x - number_3);
 let name1; let name2;
 name1="john";
  name2="John";
-console.log(name1 == name2);
+ console.log(name1 , name2);
+console.log(name1 === name2);
+console.log(name1 === name2.toLowerCase());
 
-if(name2 == "john"){
-  console.log("true");
-}
+
 
