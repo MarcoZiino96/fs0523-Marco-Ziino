@@ -76,5 +76,7 @@ name1="john";
  name2="John";
 console.log(name1 == name2);
 
-
+if(name2 == "john"){
+  console.log("true");
+}
 
