@@ -50,10 +50,13 @@ console.log(x);
   Riassegna un nuovo valore alla variabile "name" già esistente: il tuo cognome.
   Dimostra l'impossibilità di riassegnare un valore ad una variabile dichiarata con il costrutto const.
 */
-/*
-const name
-name="Marco"
-console.log(name);*/
+
+/*const name1
+name1="Marco"
+console.log(name1);
+name1="ziino"
+console.log(name1)*/
+
 name="ziino"
 console.log(name);
 
