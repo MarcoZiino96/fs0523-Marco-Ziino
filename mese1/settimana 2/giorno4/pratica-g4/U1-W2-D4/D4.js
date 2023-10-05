@@ -97,8 +97,8 @@ function check3and7(n){
 */
 function reverseString(n){
 
-    
-}
+    return n = n.replace(n,"ciao bello")    
+} console.log(reverseString("ehi"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
