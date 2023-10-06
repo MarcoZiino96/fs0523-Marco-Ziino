@@ -120,8 +120,9 @@ nav a{
 }
 
 .logo img{
-    width: 200px;
-    height: 100px;
+    padding: 30px 0 25px 0px;
+    width: 125px;
+    height: 85px;
 }
 
 footer{
@@ -129,7 +130,12 @@ footer{
 }
 footer #under_text{
     background-color: #364759;
-    padding: 20px 0;
+    padding: 10px 0;
+    font-size: 0.8rem;
+}
+
+.logo{
+    height: 100px;
 }
 
 footer a{
