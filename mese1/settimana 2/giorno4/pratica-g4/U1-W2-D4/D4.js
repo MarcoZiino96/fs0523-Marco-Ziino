@@ -60,15 +60,20 @@ function boundary(n){
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
  ritornare la stringa originale senza alterarla.
 */
-function epify(n){
-    n = "Benvenuti"
- if (n !== "EPICODE") {
-    return "EPICODE" +" " + n
-}   else if (n === "EPICODE") {
-    return n
-}
-}console.log(epify());
- console.log(epify("EPICODE"));
+ function epify(n){
+    if (n.startsWith("EPICODE")){
+        return n;   
+    }else{
+        return "EPICODE" + " " + n;
+    }
+}console.log(epify("EPICODEFANTASTIC"));
+ console.log(epify("FANTASTIC"));
+ 
+
+
+
+ 
+ 
     
   
 
@@ -79,33 +84,58 @@ function epify(n){
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 function check3and7(n){
-    n = Math.abs(n)
-    if (n % 3 === 0){
-         return "è un multiplo di 3";
-}   else if (n % 7 === 0){
-    return "è un multiplo di 7";
-}   else{
+    if (n < 0) {
+    return "non è un numero positivo"    
+    }else if (n % 3 === 0 || n % 7 === 0 ){
+    return "è multiplo di 3 o di 7"
+    }else{
     return "non è un multiplo di 3 o 7"
-}
+    }
 } console.log(check3and7(29));
-  console.log(check3and7(9));
+  console.log(check3and7(9)); 
   console.log(check3and7(28));
   console.log(check3and7(-28));
+    
+
+
+    
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 function reverseString(n){
+   n = n.split('');
+   n = n.reverse();
+   n = n.join("")
+   return n
+}console.log(reverseString('epicode'));
 
-    return n = n.replace(n,"ciao bello")    
-} console.log(reverseString("ehi"));
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
+ const upperFirstPhrase = function(stringa) {
+  let textstr = stringa.split('')
+  let finalString = []
+  for (let i = 0; i < textstr.length; i++ ){
+    let firstChar = textstr[i].charAt(0)
+    let uppercase = firstChar.toUpperCase()
+    let cutstring = textstr[i].slice(1)
+    let finalstr = uppercase + cutstring
+    finalString.push(finalstr)  
+  }
+  console.log(finalString.join(''))   
+}
+
+upperFirstPhrase('hello world')
+
+
+
+
+ 
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -113,8 +143,10 @@ function reverseString(n){
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
+ function cutString(stringa) {
+    return stringa.slice(1, stringa.length-1)
+}console.log(cutString("stupendo"));
 
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
