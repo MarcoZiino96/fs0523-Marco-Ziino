@@ -56,8 +56,8 @@ const cars = [
     brand: 'Volkswagen',
     model: 'Polo',
     color: 'black',
-    trims: ['life', 'style', 'r-line'],
-  }, 
+    trims: ['life', 'style', 'r-line']
+  }
 ]
 for(i = 0; i < cars.length; i++)
 if (cars[i].brand === 'Ford') {
@@ -73,15 +73,28 @@ console.log(cars);
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
-cars.push( brand = 'Volkswagen',
-           model= 'Polo',
-           color= 'black',
-           trims= ['life', 'style', 'r-line'])
+let panda = {
+  brand : 'Panda',
+  model : '4 x 4',
+  color : 'black',
+  trims : ['life', 'style','r-line']
+}
+cars.push(panda);
+console.log(cars);
+for (let i = 0; i < cars.length; i++) {
+  cars[i].trims.pop() 
+}console.log(cars);
+
+
+ 
 
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
-const justTrims = []
+ const justTrims = []
+for(i = 0; i < cars.length; i++){
+  let cutcase = cars[i].trims.shift()
+}console.log(cars);
 
 
 /* ESERCIZIO 8
@@ -100,10 +113,18 @@ const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ] 
 
-while (numericArray === 32){
-} console.log(numericArray); 
+for (let i = 0; i < numericArray.length; i++) {
+  if (numericArray[i] === 66) {
+      break;
+  }
+  console.log(numericArray[i]);
+}
   
-  i++;
+
+
+  
+
+  
 
 
 /* ESERCIZIO 10
