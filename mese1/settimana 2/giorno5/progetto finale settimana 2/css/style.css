@@ -1,1 +1,147 @@
-/* Your styles here */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #E9EDEE;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container{
+    padding: 25px;
+}
+
+h1{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.text{
+    font-size:1rem;
+    font-weight: bold;
+}
+
+.text h2{
+    padding: 10px 0 10px 10px;
+}
+h2 a{
+    color: #23727A;
+    text-decoration: none;
+}
+
+header, .logo{
+    background-color:#222F3F;
+}
+header img{
+    height: 50px;
+    width: 100px;
+    padding: 8px 0 8px 15px;
+}
+nav{
+    background-color: #364759;
+    padding: 3px 0 3px 15px;
+}
+nav a{
+    color: #E9EDEE;
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.title h2{
+    padding-top: 5px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.section_1{
+    margin-bottom: 15px;
+    padding: 3px 0;
+    text-align: center;
+    background-color: #F56600;
+    
+}
+
+.section_1 a {
+    color: #E9EDEE;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.section_2{
+    text-align: center;
+    height:140px;
+    background-image: url(../images/bg-image.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat-y;
+    padding-top: 50px;
+    color: #E9EDEE;    
+}
+
+.section_2 h3 {
+    padding-top: 10px;
+    font-size: 1rem;
+}
+
+.backgroundsection{
+    background-color:#FFFFFF;
+    margin-bottom: 15px;
+    padding-left:25px;
+    padding-bottom:10px;
+}
+
+.section_3{
+    text-align: center;
+}
+
+.item_immagine{
+
+    display: inline-block;
+    margin-right: 15px;
+}
+.item_immagine img{
+    width: 300px;
+    height:300px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.background_img, .background_img2{
+    height:300px;
+    background-size: cover;
+}
+
+.background_img{
+    background-image: url(../images/img_9.png);
+}
+
+.background_img2{
+    background-image: url(../images/img_10.png);
+}
+
+.logo img{
+    width: 200px;
+    height: 100px;
+}
+
+footer{
+    text-align: center;
+}
+footer #under_text{
+    background-color: #364759;
+    padding: 20px 0;
+}
+
+footer a{
+    color: #E9EDEE;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
