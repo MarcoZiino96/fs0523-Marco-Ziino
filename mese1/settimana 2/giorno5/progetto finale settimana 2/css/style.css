@@ -24,6 +24,8 @@ h1{
     padding: 10px 0 10px 10px;
 }
 h2 a{
+    font-size: 0.9rem;
+    padding-left: 10px;
     color: #23727A;
     text-decoration: none;
 }
