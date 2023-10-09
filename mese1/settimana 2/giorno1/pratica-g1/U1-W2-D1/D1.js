@@ -64,29 +64,13 @@ console.log(name);
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
 */
 
-let number_3
-number_3=4
-console.log(x - number_3);
-
+x - 4;
+console.log(x);
 /* ESERCIZIO 7
  Crea due variabili: "name1" e "name2". Assegna a name1 la stringa "john", e assegna a name2 la stringa "John" (con la J maiuscola!).
  Verifica che name1 sia diversa da name2 (suggerimento: è la stessa cosa di verificare che la loro uguaglianza sia falsa).
  EXTRA: verifica che la loro uguaglianza diventi true se entrambe vengono trasformate in lowercase (senza cambiare il valore di name2!).
 */
 
-let name1; let name2;
-name1="john";
- name2="John";
- console.log(name1 , name2);
-console.log(name1 === name2);
-console.log(name1 === name2.toLowerCase());
- let number3; let number4;
- number4=12;
- number5=13;
- console.log(number4, number5)
- number4++ ;
- console.log(number4 === number5);
- 
-
-
+  Function
 

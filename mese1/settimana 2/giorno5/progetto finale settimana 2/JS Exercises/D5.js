@@ -12,29 +12,37 @@ REGOLE
 */
 const pets = ['dog', 'cat', 'hamster', 'redfish']
 
-console.log(pets[0]);
-console.log(pets[1]);
-console.log(pets[2]);
-console.log(pets[3]);
-
+ for (let i = 0; i < pets.length; i++){
+     
+  console.log(pets[i]);
+}
 /* ESERCIZIO 2
     Scrivi del codice per ordinare alfabeticamente gli elementi dell'array "pets".
 */
 pets.sort()
-console.log(pets);
+
+for (let i = 0; i < pets.length; i++){
+     
+  console.log(pets[i]);
+}
+
 
 /* ESERCIZIO 3
     Scrivi del codice per stampare nuovamente in console gli elementi dell'array "pets", questa volta in ordine invertito.
 */
-pets.reverse()
-console.log(pets);
+ pets.reverse()
+for (let i = 0; i < pets.length; i++) {
+  console.log(pets[i]);  
+}
 
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
-cutpet = pets.shift()
+let cutpet = pets.shift()
 pets.push(cutpet)
-console.log(pets);
+for (let i = 0; i < pets.length; i++) {
+ console.log(pets[i]);
+}
 
 /* ESERCIZIO 5
     Dato il seguente array di oggetti, scrivi del codice per aggiungere ad ognuno di essi una proprietà "licensePlate" con valore a tua scelta.
@@ -73,17 +81,18 @@ console.log(cars);
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
-let panda = {
+  cars.push ( {
   brand : 'Panda',
   model : '4 x 4',
+  licencePlate : 'abz4565k',
   color : 'black',
   trims : ['life', 'style','r-line']
-}
-cars.push(panda);
+})
 console.log(cars);
-for (let i = 0; i < cars.length; i++) {
+for (let i = 0; i < cars.length; i++){
   cars[i].trims.pop() 
-}console.log(cars);
+}
+console.log(cars);
 
 
  
@@ -93,18 +102,22 @@ for (let i = 0; i < cars.length; i++) {
 */
  const justTrims = []
 for(i = 0; i < cars.length; i++){
-  let cutcase = cars[i].trims.shift()
-}console.log(cars);
+  justTrims.push(cars[i].trims[0]);
+}
+console.log(justTrims);
 
 
 /* ESERCIZIO 8
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
 */
-/*for (i = 0; i < cars.length; i++){
-  cars.color
- let firstchar = cars[i].color.charAt(0)  
-}console.log(firstchar);*/
+ for(i = 0; i < cars.length; i++){
+  if (cars[i].color.charAt(0) === 'b') {
+    console.log('Fizz');
+  }  else {
+    console.log('Buzz');
+  } 
+ }
 
 /* ESERCIZIO 9
     Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
@@ -113,12 +126,12 @@ const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ] 
 
-for (let i = 0; i < numericArray.length; i++) {
-  if (numericArray[i] === 66) {
-      break;
-  }
-  console.log(numericArray[i]);
-}
+ let index = 0;
+ while (numericArray[index]  !== 32) {
+      console.log(numericArray[index]);
+      index ++;
+ }
+
   
 
 
@@ -133,3 +146,89 @@ for (let i = 0; i < numericArray.length; i++) {
     es. [f, b, e] --> [6, 2, 5]
 */
 const charactersArray = ['g', 'n', 'u', 'z', 'd']
+ 
+let alphanumeric = [];
+
+for (let i = 0; i < charactersArray.length; i++) {
+  switch (charactersArray[i]) {
+    case 'a':
+      alphanumeric.push(1)
+        break;
+    case 'b':
+      alphanumeric.push(2)
+        break; 
+    case 'c':
+      alphanumeric.push(3)
+        break;
+    case 'd':
+      alphanumeric.push(4)
+        break;
+    case 'e':
+      alphanumeric.push(5)
+        break;
+    case 'f':
+      alphanumeric.push(6)
+        break; 
+    case 'g':
+      alphanumeric.push(7)
+        break;
+    case 'h':
+      alphanumeric.push(8)
+        break;    
+    case 'i':
+      alphanumeric.push(9)
+        break;
+    case 'j':
+      alphanumeric.push(10)
+        break;
+    case 'k':
+      alphanumeric.push(11)
+        break;
+    case 'l':
+      alphanumeric.push(12)
+        break; 
+    case 'm':
+      alphanumeric.push(13)
+        break;
+    case 'n':
+      alphanumeric.push(14)
+        break;
+    case 'o':
+      alphanumeric.push(15)
+        break;
+    case 'p':
+      alphanumeric.push(16)
+        break; 
+    case 'q':
+      alphanumeric.push(17)
+        break;
+    case 'r':
+      alphanumeric.push(18)
+        break;    
+    case 's':
+      alphanumeric.push(19)
+        break;
+    case 't':
+      alphanumeric.push(20)
+        break;    
+    case 'u':
+      alphanumeric.push(21)
+        break;   
+    case 'v':
+       alphanumeric.push(22)
+        break;   
+    case 'w':
+       alphanumeric.push(23)
+        break;    
+    case 'x':
+      alphanumeric.push(24)
+        break;    
+    case 'y':
+      alphanumeric.push(25)
+        break;   
+     case 'z':
+      alphanumeric.push(26)
+      break;      
+} 
+}
+console.log(alphanumeric);
