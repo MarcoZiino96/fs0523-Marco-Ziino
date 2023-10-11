@@ -104,10 +104,10 @@
        Scrivi una funzione che cambi il testo dei p figli di un div
       */
 
-      const changePcontent = function () {
+      const changePcontent = function (insidetext) {
         let paragrafi = document.querySelector('div p');
-        paragrafi.innerText = 'Il testo di tutti i paragrafi è stato cambiato, almeno spero.... sennò non ci ho capito un bel niente'
-        
+        paragrafi.innerText = 'questo paragrafo è stato modificato nell es 3'
+          
       }
       changePcontent();
 
@@ -160,18 +160,22 @@
        Scrivi una funzione che renda verde il background di ogni lista non ordinata
       */
      const paintItGreen = function () {
-      ulfirstandsecond = document.querySelectorAll('#firstList, secondList');
-      ulfirstandsecond.forEach(l => l.style.backgroundColor = 'green'); 
-     }
-     ulfirstandsecond = document.querySelectorAll('#firstList, #secondList');
-     console.dir(ulfirstandsecond);
+      ulfirstandsecond = document.querySelectorAll('#firstList, #secondList');
+         ulfirstandsecond.forEach(l=> l.style.backgroundColor = 'green') 
+      }
      paintItGreen()
 
       /* ESERCIZIO 9
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
       */
 
-      const makeItClickable = function () {}
+      const makeItClickable = function () {
+         let target = document.querySelector('h1')
+         target.addEventListener('click',  () =>  {
+           target.classList.slice(0, target.length-1)
+         })
+      } 
+      makeItClickable()
 
       /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
