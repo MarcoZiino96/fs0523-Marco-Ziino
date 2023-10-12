@@ -1,0 +1,66 @@
+:root{
+    --main-color:#131334;
+    --main-dark-color:#0C0B1D;
+    --secondary-color:#7a408a;
+}
+
+/*****************************************************
+Stili e tipografia generale titolo
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+header{
+    font-size: 3em;
+    font-weight: 700;
+    padding: 40px 0;
+    text-align: center;
+    background-color:var(--main-dark-color);
+    color: var(--secondary-color)
+}
+
+/***************************************************
+creazione tabellone numeri
+*/
+#tablenumbers{
+    background-color: var(--main-color);
+    color: var(--secondary-color) ;
+    font-size: 1em;
+    padding: 0 ;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.number{
+    flex: 0 1 calc(100% / 10);
+    font-weight: 700;
+    padding: 10px 0;
+    border: 1px solid var(--secondary-color);
+
+}
+
+/**************************************
+stile bottone
+*/
+
+#areabutton{
+    text-align: center;  
+}
+
+.bottone_style{
+    color: blanchedalmond;
+    width: 250px;
+    height: 50px;
+    font-size: 1.5em;
+    background-color: var(--secondary-color);
+    border: 1px solid  black;   
+}
+

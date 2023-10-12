@@ -12,10 +12,11 @@ REGOLE
 */
 const pets = ['dog', 'cat', 'hamster', 'redfish']
 
- for (let i = 0; i < pets.length; i++){
-     
-  console.log(pets[i]);
-}
+ pets.forEach(pet => {pets.length
+     console.log(pet);
+})
+
+
 /* ESERCIZIO 2
     Scrivi del codice per ordinare alfabeticamente gli elementi dell'array "pets".
 */
@@ -67,14 +68,17 @@ const cars = [
     trims: ['life', 'style', 'r-line']
   }
 ]
-for(i = 0; i < cars.length; i++)
+/*for(i = 0; i < cars.length; i++)
 if (cars[i].brand === 'Ford') {
     cars[i].licencePlate='FM4895DM'
 } else if (cars[i].brand === 'Peugeot'){
   cars[i].licencePlate='CC4295LM'
 }else if (cars[i].brand === 'Volkswagen'){
   cars[i].licencePlate='PP4895KK'
-}
+}*/
+cars.forEach((car, i) =>{
+  car.licencePlate = 'abn765' + i + 'kk'
+})
 console.log(cars);
 
 /* ESERCIZIO 6
@@ -231,4 +235,4 @@ for (let i = 0; i < charactersArray.length; i++) {
       break;      
 } 
 }
-console.log(alphanumeric);
+console.log(alphanumeric); 
