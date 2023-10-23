@@ -18,11 +18,13 @@ console.log(sum);
 
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
-*/let numberRambdom = Math.floor(Math.random()* 21);
+*/
+let numberRambdom = Math.floor(Math.random()* 21);
 
 /* ESERCIZIO C
   Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
-*/let me = {
+*/
+  let me = {
   name : 'Marco',
   surname : 'Ziino',
   age : '24',
@@ -35,7 +37,8 @@ delete me.age
 
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
-*/ me.skills = ['javascript', 'PHP', 'java', 'pyton']
+*/ 
+me.skills = ['javascript', 'PHP', 'java', 'pyton']
 
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
@@ -61,6 +64,7 @@ function dice() {
   /*ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+
 function whoIsBigger(n1, n2){
   if (n1 > n2) {
     return n1
@@ -281,27 +285,29 @@ function newestmovies() {
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
-function countMovies() {
+ function countMovies() {
   return movies.length
 }
 
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
-function onlytheyears() {
+ function onlytheyears() {
   return movies.map((Years) => Years.Year ) 
 }
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
-*/function onlyInLastMillennium(){
+*/
+  function onlyInLastMillennium(){
   oldnewmovies = movies.filter( (film) => film.Year > 999 && film.Year < 1999)
  return oldnewmovies
 }
 
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
-*/function sommyearsmovies() {
+*/
+  function sommyearsmovies() {
   return movies.reduce((p, c) =>  p + parseInt(c.Year), 0) 
 }
 
@@ -311,9 +317,10 @@ function onlytheyears() {
 function searchByTitle(string){
   for(i = 0; i < string.length; i++){
     if (string == string[i].Title) {
+      return movies[i];
   }
   }
-  return movies; 
+   
 }
 
 /* ESERCIZIO 18
@@ -323,13 +330,20 @@ function searchByTitle(string){
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
-*/
+*/ 
+
+ function removeIndex(n) {
+  movies.splice(n, 1);
+  return movies; 
+}
+
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
-*/function selectcontainer() {
+*/
+  function selectcontainer() {
   let boxcontainer = document.querySelector('#container');
   return boxcontainer
 }
@@ -344,7 +358,10 @@ function selecttagtd() {
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
-*/ function colsoletexttd() {
+*/ 
+
+
+  function colsoletexttd() {
   let areatd = document.querySelectorAll('td')
   for (let i= 0; i < areatd.length; i++) {
   }
@@ -374,9 +391,10 @@ function addul() {
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
-*/function addtr() {
+*/
+function addtr() {
   let areatr = document.querySelectorAll('tr')
-  areatr.classListadd('test')
+  areatr.classList.add('test')
 }
 
 // [EXTRA] JS Avanzato
