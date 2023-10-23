@@ -158,4 +158,40 @@
     }
 
    
+
+    .videoForm{
+        display: flex;
+    }
+
+    .videoForm section{
+        border-radius: 20px;
+    }
+
+    fieldset input{
+        width: 85%;
+        padding: 1.5rem;
+    }
+
+    fieldset button{
+        padding: 1.5rem 3rem;
+        
+    }
+
+    .inline{
+        display: flex;
+    }
+
+    .inline div{
+        flex: 1 1 calc(100% / 3);
+    }
+}
+
+@media print{
+    header, footer{
+        display: none;
+    }
+
+    article section, aside{
+        display: none;
+    }
 }
