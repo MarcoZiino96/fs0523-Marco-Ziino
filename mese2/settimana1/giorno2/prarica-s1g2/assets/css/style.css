@@ -76,11 +76,24 @@ main {
 }
 
 .underlineTitle {
-    width: 100%;
+    display: inline;
     position: relative;
-    top: -2rem;
+    text-wrap: nowrap; 
+}
 
-    
+.underlineTitle::after{
+    content: "";
+    background-image: url(../img/underline.svg);
+    width: 100%;
+    height: 50px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size:contain;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    opacity: 0.7;
 }
 
 .borderBadge {
@@ -270,12 +283,34 @@ footer a {
     height: 2rem;
     width: 2rem;
     background-color: #AEBFC5;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 2px solid white;
     position: relative;
+    
 }
 
-.far.fa-caret-square-up, .fas.fa-calendar-alt, .far.fa-plus-square{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
+.button{
+    position: fixed;
+    right: -3px;
+    bottom: 15px;
 }
+.icons{
+    display: block;
+    background-color:rgba(142, 139, 139, 0.8);
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: 2px solid white;
+    margin-top:10px;
+}
+
+.icons-blue{
+color: #0058A8;
+}
+
+.icon-red{
+   color: #F65E5E; 
+}
+
