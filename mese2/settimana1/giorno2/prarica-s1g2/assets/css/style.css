@@ -33,6 +33,13 @@ header {
     box-shadow: 0 3px 3px #444;
     margin-bottom: 1.5em;
     padding: 2em 1.5em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+   
+   
+    
 }
 
 header div img {
@@ -68,32 +75,44 @@ main {
     margin-bottom: 1.5em;
 }
 
-#blue img {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding-top: 0.2rem;
+.underlineTitle {
+    width: 100%;
+    position: relative;
+    top: -2rem;
+
+    
 }
 
-.borderBadge{
-    border: 4px solid #00a0c6;
-    outline: 4px solid #a02571;
+.borderBadge {
+    float: left;
+    border: 3px solid #00a0c6;
+    outline: 3px solid #a02571;
+    width: 5rem;
+    height: 5.5rem;
+    padding: 0.3rem;
+    margin-right: 1.2rem;
 }
-
-
 
 section {
     background-color: #e3e3e3;
-    padding: 1em;
+    padding: 5rem;
     margin-bottom: 2em;
+    position: relative;
+    
 }
 
 section h2 {
     text-align: center;
-    color: #333;
-    font-size: 2rem;
+    width: 10rem;
+    color: #333637;
+    background-color: #A2A3A3;
+    font-size: 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 1em;
+    border-radius: 3px;
+    position: absolute;
+    top: -2rem;
+    left: 1.2rem;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -102,6 +121,7 @@ h1 {
     font-weight: bold;
     letter-spacing: -0.03em;
     margin-bottom: 0.7em;
+    position: relative;
 }
 
 p,
@@ -180,6 +200,7 @@ tbody tr:last-of-type {
 }
 
 /* FORM */
+
 input {
     padding: 5px;
     border: 0;
@@ -217,6 +238,18 @@ aside div p:last-child {
     text-align: right;
 }
 
+.inline div{
+    position: relative;
+}
+
+ .inline .fas.fa-tag{
+    font-size: 5rem;
+    color: #CECECE;
+    position: absolute;
+    top: 8px;
+    right: 5px;
+}
+
 
 /* FOOTER */
 footer {
@@ -231,4 +264,18 @@ footer {
 
 footer a {
     color: fuchsia;
+}
+
+.button-icons{
+    height: 2rem;
+    width: 2rem;
+    background-color: #AEBFC5;
+    position: relative;
+}
+
+.far.fa-caret-square-up, .fas.fa-calendar-alt, .far.fa-plus-square{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
 }
