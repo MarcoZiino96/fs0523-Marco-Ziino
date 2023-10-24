@@ -1,0 +1,197 @@
+/* responsive mobile view*/
+
+@media screen and (min-width : 575px) {
+
+    header div {
+        height: 10rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    header div img {
+        width: 150px;
+        height: 50px;
+    }
+
+    header nav {
+        padding-top: 20px
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        padding-left: 1rem;
+    }
+
+    article h1 {
+        font-size: 5rem;
+        line-height: 5.5rem;
+    }
+
+    article h2 {
+        font-weight: bold;
+    }
+
+    main {
+        font-size: 1.8rem;
+    }
+
+    #red {
+        width: 4.4rem;
+        height: 4.4rem;
+    }
+
+    #blue {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    #blue img {
+        width: 3rem;
+        height: 3rem;
+        padding-top: 0.4rem;
+    }
+
+    section h2 {
+        background-color: #A3A3A3;
+        padding: 0.5rem 0;
+    }
+
+    aside h2 {
+        font-size: 2.5rem;
+    }
+
+    footer {
+        font-size: 2rem;
+    }
+}
+
+
+/* responsive medium */
+
+@media screen and (min-width:768px) {
+
+    header div {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        font-size: 2rem;
+    }
+
+    article h1 {
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+
+    main {
+        font-size: 2rem;
+    }
+
+
+    #red {
+        width: 6.2rem;
+        height: 6.2rem;
+    }
+
+    #blue {
+        width: 5.8rem;
+        height: 5.8rem;
+    }
+
+    #blue img {
+        width: 4.8rem;
+        height: 4.8rem;
+        padding-top: 0.4rem;
+    }
+
+    article h2 {
+        font-weight: bold;
+    }
+
+   table{
+    margin: 0 auto;
+   }
+}
+
+/* responsive desktop*/
+
+@media screen and (min-width:1200px){
+
+    body{
+        margin: 8rem;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        
+    }
+    header div{
+        display: flex;
+        font-size: 2rem;
+    }
+    
+    header p {
+        padding-top: 3rem;
+        padding-left: 3rem;
+    }
+
+    header div img {
+        width: 250px;
+        height: 100px;
+    }
+
+    nav ul{
+        padding-top: 1.2rem;
+        padding-left: 5rem;
+    }
+
+    table{
+        width: 70%;
+    }
+
+   
+
+    .videoForm{
+        display: flex;
+    }
+
+    .videoForm section{
+        border-radius: 20px;
+    }
+
+    fieldset input{
+        width: 85%;
+        padding: 1.5rem;
+    }
+
+    fieldset button{
+        padding: 1.5rem 3rem;
+        
+    }
+
+    .inline{
+        display: flex;
+    }
+
+    .inline div{
+        flex: 1 1 calc(100% / 3);
+    }
+}
+
+@media print{
+    header, footer{
+        display: none;
+    }
+
+    article section, aside{
+        display: none;
+    }
+}
