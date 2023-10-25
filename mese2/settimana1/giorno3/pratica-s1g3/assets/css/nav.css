@@ -1,24 +1,116 @@
-/* Nav Bar*/
-.navBar{
-    list-style-type: none;
-    display: flex;
+/*mobile responsive*/
+
+/*Condizioni generali*/
+
+ *{
+    box-sizing: border-box;
+ }
+
+ #container{
+    padding: 15px 10px;
+ }
+
+img{
+    max-width: 100%;
 }
 
-.navButton{
-    background-color:#F3DF85;
-    vertical-align: middle;
+h1, h3, h4{
+    font-family:'Roboto', sans-serif;
+    font-weight: bold;
+    color: #612519;
+}
+h1, h3{
     text-align: center;
-    padding:10px 15px;
-    border-radius: 30px;  
+}
+h1{
+    font-size: 2rem;
+    padding: 25px 0;
 }
 
-.navButton a{
+h3{
+    font-size:1.4rem;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+/* nav bar mobile*/
+a{
     text-decoration: none;
-    color: #612406;
-    font-size: 0.8rem;
+    color:#612519 ;
+    font-weight: bold;
 }
 
-.Shop img{
-    height: 30px;
-    width: 30px;
+header{
+    background-color:#FBF7E3;
+    padding: 30px 30px;
+    border-radius:80px;
 }
+
+#menu{
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img{
+    width: 50px;
+}
+
+#menu .link.link1{
+    text-align: center;
+    flex-basis: 100%;
+}
+
+#menu .link.link1 .logo{
+    font-size: 2rem;
+    padding:  30px 10px;
+}
+
+#menu .link a{
+    background-color:#F3DF85;
+    display: block;
+    text-align: center;
+    padding:  15px 5px;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+#menu .link2,
+#menu .link3,
+#menu .link4,
+#menu .link5{
+    flex-basis:calc(50% - 10px);
+}
+
+/* css main*/
+
+.card{
+    padding-bottom: 20px;
+}
+
+.article{
+    background-color: #FBF7E3;
+    padding:20px;
+    border-radius: 15px;
+}
+.imageHoney{
+    padding-top:20px;
+}
+.text h4{
+    padding-bottom: 15px;
+}
+.text p{
+    color: #612519;
+    font-size:1rem;
+}
+
+
+
+
+
+
+
+
