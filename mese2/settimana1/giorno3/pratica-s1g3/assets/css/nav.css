@@ -1,0 +1,24 @@
+/* Nav Bar*/
+.navBar{
+    list-style-type: none;
+    display: flex;
+}
+
+.navButton{
+    background-color:#F3DF85;
+    vertical-align: middle;
+    text-align: center;
+    padding:10px 15px;
+    border-radius: 30px;  
+}
+
+.navButton a{
+    text-decoration: none;
+    color: #612406;
+    font-size: 0.8rem;
+}
+
+.Shop img{
+    height: 30px;
+    width: 30px;
+}
