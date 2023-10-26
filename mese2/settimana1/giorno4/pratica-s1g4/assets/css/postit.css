@@ -11,13 +11,13 @@
     display: flex;
     flex-wrap: wrap;
     font-family: 'Indie Flower', cursive;
-    padding: 20px 350px;
+    padding: 20px 30px;
     gap: 20px;
     justify-content: center;
 }
 
 .postIt{
-    flex-basis:120px;
+    flex-basis:calc(100%/4 - 20px);
     text-align: center;
     height: 100px;
     box-shadow: 3px 3px #363636;
