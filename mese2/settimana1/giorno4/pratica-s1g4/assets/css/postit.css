@@ -1,0 +1,65 @@
+:root {
+    --giallo: #fefece;
+    --verde: #ccfece;
+    --viola: #cacafa;
+    --backGround: #666666;
+}
+
+#container{
+    background-color: var(--backGround);
+    height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Indie Flower', cursive;
+    padding: 20px 350px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.postIt{
+    flex-basis:120px;
+    text-align: center;
+    height: 100px;
+    box-shadow: 3px 3px #363636;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.postIt p{
+    flex-basis: 100%;
+    font-size: 0.9rem;
+}
+.postIt p.content{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.postIt.green{
+    background-image: linear-gradient(var(--verde) 0%,
+     var(--verde) 75%, #a1b8a1 90%, #a1b8a1 100%);
+     transform: rotate(3deg);
+}
+
+.postIt.yellow{
+    background-image: 
+    linear-gradient(var(--giallo) 0%, 
+    var(--giallo) 75%, #bdbda3 90%, #bdbda3 100%);
+    transform: rotate(-6deg);
+}
+
+.postIt.violet{
+    background-image: 
+    linear-gradient(var(--viola) 0%, 
+    var(--viola) 75%, #8b8c9b 90%, #8b8c9b 100%);
+    transform: rotate(-7deg);
+}
+ .postIt:nth-of-type(4){
+    transform: rotate(10deg);
+ }
+
+ .postIt:hover{
+    transform: scale(1.5);
+ }
+
+
