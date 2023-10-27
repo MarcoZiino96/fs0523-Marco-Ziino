@@ -1,0 +1,237 @@
+/**** Impostazioni Generiche css****/
+body{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Spectral', serif;    
+}
+
+h1{
+    font-size: 6rem;
+    color: #000000;
+    font-weight: bold;
+    flex-basis: 100%;
+}
+
+.container{
+    padding:  40px 80px 0;
+}
+
+.container.one{
+    border-bottom: 1px solid #F2F2F2;
+}
+
+h4{
+    font-size:1rem;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: #242424;
+}
+
+
+
+/****Definizione stile NavBar****/
+
+header #navBar{
+    background-color: #FFC017;
+    display: flex;
+    color: #242424;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #242424 ;
+    padding: 25px 80px 20px 80px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.navBarLink ul{
+    display: flex;
+    list-style-type: none;
+    align-items: baseline;
+}
+
+.navBarLink ul a{
+    font-size: 0.9rem;
+}
+
+.navBarLink ul li, .buttonLinkOne, .buttonLinkTwo{
+    padding-right:20px;
+}
+
+.navBarLink .buttonLinkOne, .buttonLinkTwo{
+    font-size: 0.9rem;
+    border: none;
+    color: #242424;
+    cursor: pointer;
+} 
+
+.navBarLink .buttonLinkOne{
+    background-color: #FFC017;
+    font-family:'Spectral', serif;
+}
+
+ .buttonLinkTwo{
+    color: #FFFFFF;
+    background-color:#000000;
+    padding: 10px 15px;
+    border-radius:30px;
+}
+ 
+
+/****Definizione stile section****/
+
+section{
+    color: #242424;
+    background-color: #FFC017;
+    padding-left: 80px;
+    border-bottom: 1px solid #242424;
+    display: flex;
+    justify-content: space-between;
+}
+
+.three{
+    padding: 10px 50px;
+    background-color: #242424;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.three:hover{
+    background-color: #000000;
+}
+
+.sectionLeft{
+    padding: 100px 0 80px;
+}
+
+.sectionLeft h3{
+    font-size: 1.5rem;
+    padding: 20px 0px 40px;
+    width: 65%;
+}
+
+/****Specifiche stile main 1****/
+
+/**** Articoli****/
+
+.articoli{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    padding-bottom: 40px;
+}
+
+.articleMain{
+    flex-basis: calc(100%/3);
+}
+
+.titleMain{
+    display: flex;
+    align-items: center;
+    padding-bottom:10px;
+}
+
+.image{
+    padding-right:8px;
+}
+
+.articleMain{
+    display: flex;
+}
+
+.utente{
+    display: flex;
+    align-items: center;
+}
+
+.utente a{
+    font-size: 0.7rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+.number{
+    color: #F2F2F2;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-right: 25px;
+}
+
+.utente .imagineUtente img{
+    height: 20px;
+    width: 20px;
+    padding-right: 5px;
+    border-radius:20px;
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.user h4{
+    font-weight: bold;
+    color: #000000;
+}
+
+.user p{
+    font-size: 0.9rem;
+    color: #6b6a6a;
+    position: relative;
+}
+
+.punto{
+    padding: 0 4px;
+}
+.starImg img{
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+    padding-left: 5px;
+    cursor: pointer;
+}
+/**** Main due****/
+
+.articoliSecondari{
+    display: flex;
+    flex-direction: column;
+}
+
+.articoliSecondari .articleMain{
+    flex-basis:50%;
+}
+
+.user.secondary h4{
+        font-size:1.5rem;
+}
+
+.user.secondary  a p{
+    font-size: 1rem;
+    padding-top: 5px;
+}
+
+.imagineMainSecondary img{
+   max-width:250px;
+   height: 180px;
+   padding-left: 50px;
+}
+
+.user.secondary .buttonAncora{
+    background-color: #F2F2F2;
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+
+.user.secondary .icona {
+   vertical-align: middle;
+}
+
+.user.secondary .icona img{
+  margin-left:100%;
+}
+
+
+
+
+
