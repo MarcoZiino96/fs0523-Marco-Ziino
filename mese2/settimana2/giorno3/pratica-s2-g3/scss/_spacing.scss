@@ -1,0 +1,31 @@
+$misure : 8, 16, 24, 32;
+
+@each $m in $misure{
+    .mt-#{$m}{
+        margin-top : $m + px;
+    }
+    .mb-#{$m}{
+        margin-bottom : $m + px;
+    }
+    .ml-#{$m}{
+        margin-left : $m + px;
+    }
+    .mr-#{$m}{
+        margin-right : $m + px;
+    }
+}
+
+@each $p in $misure{
+    .pt-#{$p}{
+        padding-top: $p + px;
+    }
+    .pb-#{$p}{
+        padding-bottom : $p + px;
+    }
+    .pl-#{$p}{
+        padding-left: $p + px;
+    }
+    .pr-#{$p}{
+        padding-right: $p + px;
+    }
+}
