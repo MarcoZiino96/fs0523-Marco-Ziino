@@ -1,4 +1,24 @@
 
+/* header home Netflix*/
+
 .navbar .container-fluid img{
     width: 90px;
+}
+
+i{
+    height: 30px;
+    width: 30px;
+}
+
+.d-flex i, .d-flex a{
+    color: white;
+}
+
+ .navbar .collapse .d-flex .imgKids img{
+    height: 30px;
+    width: 30px;
+}
+
+.navbar .collapse .d-flex a:hover{
+    color: red;
 }
