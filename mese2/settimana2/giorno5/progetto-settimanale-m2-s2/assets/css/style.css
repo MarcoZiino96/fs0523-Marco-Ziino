@@ -1,7 +1,7 @@
 
 /* header home Netflix*/
 
-.navbar .container-fluid img{
+.navbar img{
     width: 90px;
 }
 
@@ -10,15 +10,46 @@ i{
     width: 30px;
 }
 
-.d-flex i, .d-flex a{
+.px-3 .navbar .collapse .d-flex i, .d-flex .nav-link.pe-5.pe-lg-3{
     color: white;
+}
+
+footer .navbar-nav .d-flex i{
+    font-size: 25px;
 }
 
  .navbar .collapse .d-flex .imgKids img{
     height: 30px;
     width: 30px;
 }
-
-.navbar .collapse .d-flex a:hover{
+ 
+.collapse .navbar-nav
+ a:hover{
     color: red;
 }
+
+.navbar .collapse .d-flex 
+.nav-link.pe-5.pe-lg-3:hover{
+    color: red;
+} 
+
+/* section film*/
+
+ .title .dropdown-menu li a:hover{
+    background-color: red;
+ }
+
+ .row .mb-2{
+    padding-left: 0;
+    padding-right: 0;
+ }
+
+ /* footer*/
+
+ footer .navbar-nav .nav-item p{
+    font-size: 0.8rem;
+ }
+
+
+
+ 
