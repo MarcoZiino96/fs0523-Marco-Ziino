@@ -8,7 +8,7 @@ header .col-12 img{
     width: 100px;
 }
 
-h4, h5, p, label{
+h4, .btn.fw-bold, p, label{
     font-size: 0.7rem;
 }
 
@@ -17,8 +17,13 @@ h4, h5, p, label{
     font-size: 0.8rem;
 }
 
-.row .col-7 .col-12 .fw-bold.p-2{
+.row .col-7 .col-12 .btn.fw-bold{
     background-color: #333333;
+    padding: 0.3rem;
+}
+
+.row .col-7 .col-12 .btn.fw-bold:hover{
+    background-color:#696464 ;
 }
 
 .form-check-input{
