@@ -14,7 +14,7 @@ i{
     color: white;
 }
 
-footer .navbar-nav .d-flex i{
+footer .row .d-flex i{
     font-size: 25px;
 }
 
@@ -49,6 +49,29 @@ footer .navbar-nav .d-flex i{
  footer .navbar-nav .nav-item p{
     font-size: 0.8rem;
  }
+
+ /* Responsive container footer*/
+
+ @media screen and (min-width :576px) {
+
+    .containerFooter{
+            margin:2% 0% 0% 2%;
+        }
+    }
+
+ @media screen and (min-width :768px) {
+
+.containerFooter{
+        margin:5%;
+    }
+}
+
+@media screen and (min-width :992px) {
+
+    .containerFooter{
+            margin:10%;
+        }
+    }
 
 
 
