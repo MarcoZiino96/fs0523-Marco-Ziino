@@ -23,7 +23,7 @@ footer .row .d-flex i{
     width: 30px;
 }
  
-.collapse .navbar-nav
+.collapse .navbar-nav,
  a:hover{
     color: red;
 }
@@ -45,31 +45,34 @@ footer .row .d-flex i{
  }
 
  /* footer*/
-
- footer .navbar-nav .nav-item p{
-    font-size: 0.8rem;
+ .containerFooter .p-2 .row .col-12 .navbar-nav .nav-item a:hover{
+    color: red;
  }
+
+  .p-2 .font-monospace{
+    font-size: 0.8rem;
+  }
 
  /* Responsive container footer*/
 
  @media screen and (min-width :576px) {
 
     .containerFooter{
-            margin:2% 0% 0% 2%;
+            margin:10px 0 0 10px;
         }
     }
 
  @media screen and (min-width :768px) {
 
 .containerFooter{
-        margin:5%;
+        margin: 5% 2%;
     }
 }
 
 @media screen and (min-width :992px) {
 
     .containerFooter{
-            margin:10%;
+            margin:10% 5%;
         }
     }
 
