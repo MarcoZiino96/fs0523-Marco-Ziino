@@ -1,100 +1,96 @@
-
-.containerProfile{
-    margin:2% 2% 2% 5%;
+.containerProfile {
+    margin: 2% 2% 2% 5%;
 }
 
-header .col-12 img{
+header .col-12 img {
     width: 120px;
 }
 
-.row .col-5 img{
+.row .col-5 img {
     height: 100px;
     width: 100px;
 }
 
-h4, .btn.fw-bold, p, label{
+h4,
+.btn.fw-bold,
+p,
+label {
     font-size: 0.7rem;
 }
 
-.row .col-7 select.border{
+.row .col-7 select.border {
     background-color: black;
     font-size: 0.8rem;
 }
 
-.row .col-7 .col-12 .btn.fw-bold{
+.row .col-7 .col-12 .btn.fw-bold {
     background-color: #333333;
     padding: 0.3rem;
 }
 
-.row .col-7 .col-12 .btn.fw-bold:hover{
-    background-color:#696464 ;
+.row .col-7 .col-12 .btn.fw-bold:hover {
+    background-color: #696464;
 }
 
-.form-check-input{
+.form-check-input {
     height: 20px;
     width: 20px;
     background-color: transparent;
 }
 
-.containerProfile .row.text-white .col-12 .row .btn.btn-dark{
+.containerProfile .row.text-white .col-12 .row .btn.btn-dark {
     width: 100%;
-    font-size:0.6rem;
+    font-size: 0.6rem;
 }
-button.btn:hover{
+
+button.btn:hover {
     background-color: white;
 }
- /* responsive conteiner profile*/
+
+/* responsive conteiner profile*/
 
 @media screen and (min-width :400px) {
 
-    .containerProfile{
-        margin:5% 5% 5% 13%;
+    .containerProfile {
+        margin: 5% 5% 5% 13%;
     }
 }
 
 @media screen and (min-width:468px) {
-    .containerProfile .row.text-white .col-12 .row .btn.btn-dark{
+    .containerProfile .row.text-white .col-12 .row .btn.btn-dark {
         font-size: 0.8rem;
     }
-    
+
 }
 
-    @media screen and (min-width :500px) {
+@media screen and (min-width :500px) {
 
-        .containerProfile{
-            margin:  5% 15% 5% 20%;
-        }
+    .containerProfile {
+        margin: 5% 15% 5% 20%;
+    }
 }
 
 @media screen and (min-width :768px) {
 
-    .containerProfile{
-        margin:  5% 20% 5% 15%;
+    .containerProfile {
+        margin: 5% 20% 5% 15%;
     }
-    .containerProfile .row.text-white .col-12 .row .btn.btn-dark{
+
+    .containerProfile .row.text-white .col-12 .row .btn.btn-dark {
         font-size: 1rem;
     }
 }
 
 @media screen and (min-width:1200px) {
-    .containerProfile .row.text-white .col-12 .row .btn.btn-dark{
+    .containerProfile .row.text-white .col-12 .row .btn.btn-dark {
         font-size: 1.2rem;
     }
-    
+
 }
 
 @media screen and (min-width:1400px) {
-    .containerProfile .row.text-white .col-12 .row .btn.btn-dark{
+    .containerProfile .row.text-white .col-12 .row .btn.btn-dark {
         font-size: 1.5rem;
     }
-    
+
 }
-
-
-
-
-
-
-
-
-
