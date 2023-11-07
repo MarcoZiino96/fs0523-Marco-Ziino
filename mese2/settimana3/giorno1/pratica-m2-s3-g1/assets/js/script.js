@@ -25,7 +25,58 @@ let giuseppe = new User('giuseppe', 'Ziino', 27, 'Messina');
  console.log(giuseppe.comparazionEtà(marco));
 
 
- class Pets{
+
+class AnimalList{
+    constructor(animalListArea){
+        this.ListArea = document.querySelector(animalListArea)
+        this.input1=null;
+        this.input2=null;
+        this.input3=null;
+        this.input4=null;
+        this.bottonAdd=null;
+        this.ulArea = null;
+        this.createHTMLInput();
+    }
+
+    createHTMLInput(){
+        this.input1 = document.createElement('input');
+        this.input2 = document.createElement('input');
+        this.input3 = document.createElement('input');
+        this.input4 = document.createElement('input');
+        this.createBotton()
+        this.ulArea = document.createElement('ul');
+        
+        this.ListArea.append(this.input1, this.input2, this.input3, this.input4,
+            this.bottonAdd, this.ulArea);
+    }
+       createBotton(){
+        this.bottonAdd = document.createElement('button');
+        this.bottonAdd.innerHTML = 'Aggiungi';
+        this.bottonAdd.addEventListener('click', ()=>{
+            this.createLi();
+            this.input1.value='';
+            this.input2.value='';
+            this.input3.value='';
+            this.input4.value='';
+          })       
+}
+     createLi(){
+        let li1 = document.createElement('li')
+        li1.innerText = this.input1.value;
+        let li2 = document.createElement('li')
+        li2.innerText = this.input2.value;
+        let li3 = document.createElement('li')
+        li3.innerText = this.input3.value;
+        let li4 = document.createElement('li')
+        li4.innerText = this.input4.value;
+       
+        this.ulArea.append(li1, li2, li3, li4)
+}
+}
+
+new AnimalList('#animaliList')
+
+class Pets{
     constructor(pn,on,s,b){
         this.petName = pn;
         this.onwerName = on;
@@ -36,22 +87,15 @@ let giuseppe = new User('giuseppe', 'Ziino', 27, 'Messina');
         if (this.onwerName === altroAnimale.onwerName){
             return "true";
         }else{
-            return `false`;
+            return "false";
         }
     }
- }
-
-
- let animal = new Pets('jonny', 'Marco' , 'Cane', 'Bassotto');
- let animal2 = new Pets('franco', 'Marco' , 'Gatto', 'Persiano');
- let animal3 = new Pets('jonathan', 'Alessio' , 'Ucello', 'Passerotto');
-
- console.log(animal.comparStessoProprietario(animal3));
- console.log(animal.comparStessoProprietario(animal2));
- console.log(animal2.comparStessoProprietario(animal3));
- console.log(animal3.comparStessoProprietario(animal2));
- console.log(animal2.comparStessoProprietario(animal));
+}
 
 
 
+
+
+
+ 
 
