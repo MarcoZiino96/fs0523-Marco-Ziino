@@ -20,18 +20,22 @@ elimina.addEventListener('click', ()=>{
     localStorage.removeItem('nome');
 });
 
+let tempoHTML = document.querySelector('.counter');
 
-function contatore() {
-    let counter = document.querySelector('.counter');
-    let valoreContatore =  sessionStorage.getItem('contatore');
-    if(valoreContatore == null){
-        valoreContatore = 0;
-    }
-    valoreContatore++;
-    sessionStorage.setItem('contatore', valoreContatore);
-    counter.innerText = valoreContatore;
+setInterval( ()=>{
+ tempoHTML.innerText    = contatore
+    sessionStorage.setItem('tempo' , contatore)
+    contatore++;
+}, 1000);
+
+let tempoSalvato = sessionStorage.getItem('tempo');
+ let contatore =0;
+if(!tempoSalvato){
+    contatore;
+}else{
+    contatore = tempoSalvato;
 }
-setInterval(contatore, 1000);
+
 
 
 
