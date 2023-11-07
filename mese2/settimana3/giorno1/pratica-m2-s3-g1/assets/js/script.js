@@ -26,7 +26,7 @@ let giuseppe = new User('giuseppe', 'Ziino', 27, 'Messina');
 
 
 
-class AnimalList{
+class HTMLInit{
     constructor(animalListArea){
         this.ListArea = document.querySelector(animalListArea)
         this.input1=null;
@@ -74,7 +74,7 @@ class AnimalList{
 }
 }
 
-new AnimalList('#animaliList')
+new HTMLInit('#animaliList')
 
 class Pets{
     constructor(pn,on,s,b){
