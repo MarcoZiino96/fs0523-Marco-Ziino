@@ -2,3 +2,7 @@
 .row .card .card-img-top{
     height: 300px;
 }
+
+.row .col-12 .card-body .card-title{
+    height : 100px;
+}
