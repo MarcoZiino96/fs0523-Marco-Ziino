@@ -9,13 +9,48 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="bg-dark">
 
     <header>
 
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+
+
+            <a href="#">NavBar</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="backOffice.html">backOffice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Recently Added</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">My List</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+
     </header>
 
-    <div class="container">
+    <div class="container bg-secondary">
 
         <div class="row">
 
@@ -24,7 +59,7 @@
     </div>
 
     <template>
-        <div class="col-3">
+        <div class="col-3 mb-3">
             <div class="card">
                 <img src="" class="card-img-top" alt="">
                 <div class="card-body">
@@ -32,7 +67,7 @@
                     <h6 class="brandProduct h6"></h6>
                     <p class="card-text description"></p>
                     <p class="card-text price"></p>
-                    <a href="#" class="btn btn-primary modifica">Modifica</a>
+                    <a href="backOffice.html" class="btn btn-primary">Aggiungi</a>
                     <a href="#" class="btn btn-danger scopriDiPiu">Scopri di più</a>
                 </div>
             </div>
@@ -48,7 +83,7 @@
 
 
 
-    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/homepage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

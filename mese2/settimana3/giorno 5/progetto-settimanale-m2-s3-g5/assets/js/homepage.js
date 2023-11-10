@@ -30,7 +30,7 @@ async function productCard() {
         nameBrand.innerText = p.brand;
         descriptionCard.innerText = p.description;
         priceCard.innerText = p.price;
-        btnScopriDiPiu.href = "homepage.html?id=" + p._id;
+        btnScopriDiPiu.href = 'details.html?id=' + p._id;
         areaCard.append(cloneCard);
 })
 }
