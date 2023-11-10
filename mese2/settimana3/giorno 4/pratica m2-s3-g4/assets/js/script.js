@@ -10,7 +10,7 @@ let apiKey = '45yUF4ICbVXvWXicRuoehhdaFyRd7jwJJGrMUevDPWwinW9MvZD3pkPP';
 async function loadImg() {
     let resp = await fetch(query1, {
         headers :{
-            'authorization': `${apiKey}`
+            authorization : apiKey
         }
     } );
 
