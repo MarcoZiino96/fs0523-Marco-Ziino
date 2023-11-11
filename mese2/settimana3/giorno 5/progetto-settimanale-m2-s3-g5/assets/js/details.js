@@ -9,9 +9,6 @@ async function productCard() {
     })
     let data = await resp.json();
 
-    
-console.log(data);
-
     data.forEach( (p)=> {
 
         let tr = document.createElement('tr');

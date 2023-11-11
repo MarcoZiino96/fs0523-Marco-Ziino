@@ -29,16 +29,29 @@ btnCrea.addEventListener('click', async () => {
         },
         body: JSON.stringify(newProduct)
      })
-    
+     
      if (resp.status === 200) {
-         
-        Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "prodotto creato con successo!",
-            showConfirmButton: false,
-            timer: 1500
-          });
+  
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "prodotto creato con successo!",
+                showConfirmButton: false,
+                timer: 1500
+              });
+
+              
+    
+
+        }else{
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "prodotto non creato!",
+                showConfirmButton: false,
+                timer: 1500
+            });
+                location.href = '../crud/homepage.html';    
      }
      
 }  
@@ -61,13 +74,12 @@ btnModifica.addEventListener('click', async () => {
         price: priceProduct
     } 
 
+   
     let url = new URLSearchParams(location.search);
     let id = url.get('id');
 
-    
-
- await detailsCard(id);
-async function detailsCard(id){
+ await modificaCard(id);
+async function modificaCard(id){
   let resp = await fetch(fetchUrl + id , {
     method: 'PUT',
     headers: {
@@ -77,16 +89,23 @@ async function detailsCard(id){
     body: JSON.stringify(newProduct)
 })
   if (resp.status === 200) {
-         
+     
+    
         Swal.fire({
             position: "top-end",
             icon: "success",
             title: "prodotto modificato con successo!",
             showConfirmButton: false,
-            timer: 1500
-          });
+        });
+       
      } else{
-        alert("errore nella mod")
+        Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: "Prodotto non modificato! Inserisci almeno un campo!",
+            showConfirmButton: false,
+            timer: 1500
+        });
      }
 }  
 

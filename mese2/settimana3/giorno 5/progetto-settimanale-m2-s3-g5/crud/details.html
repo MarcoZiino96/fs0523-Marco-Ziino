@@ -12,9 +12,46 @@
 
 <body>
 
-    <div class="container">
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+
+
+            <a href="#"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="btn btn-primary nav-link" aria-current="page" href="homepage.html">
+                            HOME
+                        </a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a href="backOffice.html" class="btn btn-primary nav-link">
+                            AGGIUNGI
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+
+    </header>
+
+    <div class="container mt-2">
+
+        <h2 class="display-2 text-center">LISTA PRODOTTI</h2>
         <table class="table">
-            <thead>
+            <thead class="fw-bold">
                 <tr>
                     <td>dettaglio</td>
                     <td>Nome</td>
@@ -42,8 +79,13 @@
             <td class="descrizione"></td>
             <td class="prezzo"></td>
             <td>
-                <a href="modifica.html" class="modifica btn btn-warning">Modifica</a>
-                <button class="delete btn btn-danger">Elimina</button>
+                <div class="mb-1">
+                    <a href="modifica.html" class="modifica btn btn-warning">Modifica</a>
+                </div>
+                <div> 
+                    <button class="delete btn btn-danger">Elimina</button>
+                </div>
+               
             </td>
 
         </template>
