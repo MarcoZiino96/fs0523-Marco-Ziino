@@ -20,3 +20,8 @@ body{
     height: 300px;
 }
 
+.cardProdotto .areaImg .img-fluid{
+    max-width:400px ;
+    max-height:400px ;
+}
+
