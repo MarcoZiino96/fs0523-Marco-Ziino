@@ -26,6 +26,7 @@ async function productCard() {
         let descriptionCard = cloneCard.querySelector('.card-text.description');
         let priceCard = cloneCard.querySelector('.card-text.price');
         let btnDettaglio = cloneCard.querySelector('.dettaglio');
+        let btnModifica = cloneCard.querySelector('.modifica');
     
         imgCard.src = p.imageUrl;
         titleCard.innerText = p.name;
@@ -33,6 +34,7 @@ async function productCard() {
         descriptionCard.innerText = p.description;
         priceCard.innerText = p.price + "€";
         btnDettaglio.href = 'details.html?id=' + p._id;
+        btnModifica.href = 'backOffice.html?id=' + p._id;
     
     areaCard.append(cloneCard);
 
