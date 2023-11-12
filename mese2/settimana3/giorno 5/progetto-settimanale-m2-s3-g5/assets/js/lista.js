@@ -28,7 +28,7 @@ async function productCard() {
         nameProduct.innerText = p.name;
         brandProduct.innerText = p.brand;
         descriptionProduct.innerText = p.description;
-        priceProduct.innerText = p.price;
+        priceProduct.innerText = p.price + "€";
         btnModifica.href = 'backOffice.html?id=' + p._id;
         
         btnDelete.addEventListener('click', async () => {

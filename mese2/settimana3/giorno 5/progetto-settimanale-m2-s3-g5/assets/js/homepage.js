@@ -15,7 +15,6 @@ async function productCard() {
 
     let areaCard = document.querySelector('.row');
 
-console.log(data);
     data.forEach( (p)=> {
 
         let cloneCard = getClone();
@@ -30,7 +29,7 @@ console.log(data);
         titleCard.innerText = p.name;
         nameBrand.innerText = p.brand;
         descriptionCard.innerText = p.description;
-        priceCard.innerText = p.price;
+        priceCard.innerText = p.price + "€";
     
     areaCard.append(cloneCard);
 
