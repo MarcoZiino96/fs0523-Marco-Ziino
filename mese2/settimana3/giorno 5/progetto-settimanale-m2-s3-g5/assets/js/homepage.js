@@ -4,7 +4,6 @@ let apiKey = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRlMDVjYz
 
 /* funzione asincrona che mi permette di effetuare una chiamata fetch method get, che tramite un ciclo e la funzione precedentemente creata 'getCloneCard' mi creo una card per ogni prodotto presente nel array data */
 
-
 async function productCard() {
     let resp = await fetch(fetchUrl, {
         headers: {
@@ -24,14 +23,19 @@ async function productCard() {
         let nameBrand = cloneCard.querySelector('.brandProduct');
         let descriptionCard = cloneCard.querySelector('.card-text.description');
         let priceCard = cloneCard.querySelector('.card-text.price');
+        let btnDettaglio = cloneCard.querySelector('.dettaglio');
     
         imgCard.src = p.imageUrl;
         titleCard.innerText = p.name;
         nameBrand.innerText = p.brand;
         descriptionCard.innerText = p.description;
         priceCard.innerText = p.price + "€";
+        btnDettaglio.href = 'details.html?id=' + p._id;
     
     areaCard.append(cloneCard);
+
+    
+    
 
 })
 
