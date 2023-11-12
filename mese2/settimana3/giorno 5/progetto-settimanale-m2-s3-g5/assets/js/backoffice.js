@@ -8,7 +8,8 @@ let id = url.get('id')
 
 
 
-
+/* cliccando il tasto modifica dalla lista mi permette di avere input 
+con i values dell ogetto in questione nel back office*/
 async function innerInput(id) {
     let resp = await fetch(fetchUrl + id, {
         headers: {
@@ -32,13 +33,15 @@ async function innerInput(id) {
 }
 innerInput(id);
 
+/* mi permette di resettare il campo input richiamando la funzione reset*/
 btnReset.addEventListener('click',  () => {
     reset();
 })
 
+/* evento che mi permettere di creare un ogetto con  metodo post*/
 btnCrea.addEventListener('click', async () => {
 
-    let nameProduct = document.querySelector('#brandProduct').value;
+    let nameProduct = document.querySelector('#nameProduct').value;
     let description = document.querySelector('#description').value;
     let brandProduct = document.querySelector('#brandProduct').value;
     let imgProduct = document.querySelector('#imgProduct').value;
@@ -81,7 +84,7 @@ btnCrea.addEventListener('click', async () => {
             Swal.fire({
                 position: "top-end",
                 icon: "error",
-                title: "prodotto non creato! Riempi almeno un",
+                title: "riempi tutti i campi",
                 showConfirmButton: false,
                 timer: 1800
             });
@@ -91,9 +94,10 @@ btnCrea.addEventListener('click', async () => {
     }
 });
 
+/* evento che mi permettere di modificare un ogetto con metodo put*/
 btnModifica.addEventListener('click', async () => {
 
-    let nameProduct = document.querySelector('#brandProduct').value;
+    let nameProduct = document.querySelector('#nameProduct').value;
     let description = document.querySelector('#description').value;
     let brandProduct = document.querySelector('#brandProduct').value;
     let imgProduct = document.querySelector('#imgProduct').value;
@@ -143,6 +147,7 @@ btnModifica.addEventListener('click', async () => {
     }
 })
 
+/* funzione che mi resetta tutti i campi input */ 
 function reset() {
     let inputs = document.querySelectorAll('input');
     inputs.forEach(input => {

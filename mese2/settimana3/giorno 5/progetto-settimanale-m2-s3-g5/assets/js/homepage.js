@@ -14,6 +14,8 @@ async function productCard() {
 
     let areaCard = document.querySelector('.row');
 
+    console.table(data);
+
     data.forEach( (p)=> {
 
         let cloneCard = getClone();

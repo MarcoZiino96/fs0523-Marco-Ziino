@@ -3,3 +3,7 @@
     max-height: 80px ;
     max-width: 80px;
 }
+body{
+    background: radial-gradient(circle, rgba(42,252,255,0.835171568627451) 0%, rgba(45,129,253,1) 100%);
+}
+
