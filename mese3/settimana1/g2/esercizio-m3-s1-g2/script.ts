@@ -37,7 +37,7 @@ class MotherAccaunt extends SonAccaunt{
          let int:number = this.balanceInit * 1.1;
          let interesse:number = int - this.balanceInit
          console.log(` l'interesse applicato sulla cifra di ${this.balanceInit} è di ${interesse}`);
-         return interesse;
+         return  interesse;
     }
 }
 
@@ -51,6 +51,7 @@ motherAccaunt.mostraSaldo();
 motherAccaunt.prelievo(9);
 motherAccaunt.mostraSaldo();
 motherAccaunt.addInteresse();
+motherAccaunt.mostraSaldo();
 
 
 
