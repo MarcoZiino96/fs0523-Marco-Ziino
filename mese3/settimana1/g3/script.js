@@ -29,3 +29,7 @@ console.log(lavoratoreA.getRedditoAnnuoNetto());
 console.log(lavoratoreA.getTasseIrpef());
 console.log(lavoratoreA.getTasseInps());
 console.log(lavoratoreA.getUtileTasse());
+for (let index = 0; index < 10; index++) {
+    console.log(index);
+}
+//# sourceMappingURL=script.js.map
