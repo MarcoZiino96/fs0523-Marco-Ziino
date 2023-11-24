@@ -33,7 +33,6 @@ function callProduct() {
     return __awaiter(this, void 0, void 0, function* () {
         let res = yield fetch('Abbigliamento.json');
         let data = yield res.json();
-        console.log(data);
         data.forEach(c => {
             let capo = new Store(c.id, c.codprod, c.collezione, c.capo, c.modello, c.quantita, c.colore, c.prezzoivaesclusa, c.prezzoivainclusa, c.disponibile, c.saldo);
             console.log(capo.getSaldoCapo());

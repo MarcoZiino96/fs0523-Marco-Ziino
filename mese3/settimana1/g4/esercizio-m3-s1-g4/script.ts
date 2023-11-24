@@ -26,14 +26,15 @@ class Store{
 async function callProduct():Promise<any>{
     let res:Response = await fetch('Abbigliamento.json');
     let data:Store[] = await res.json();
-    console.log(data);
+    
     
 
     data.forEach(c =>{
        let capo = new Store (c.id, c.codprod, c.collezione, c.capo, c.modello, c.quantita, c.colore, c.prezzoivaesclusa, c.prezzoivainclusa, c.disponibile, c.saldo);
       console.log(capo.getSaldoCapo());
-       console.log(capo.getAcquistoCapo()); 
+       console.log(capo.getAcquistoCapo());
     });
+    
     
 }
 callProduct();
