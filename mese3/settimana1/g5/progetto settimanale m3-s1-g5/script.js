@@ -4,6 +4,8 @@ class Smartphone {
         this.carica = 0;
         this.numeroChiamate = 0;
         this.costoMinuto = 0.2;
+        this.id = 0;
+        this.registrochiamate = [];
     }
     ricarica(euro) {
         this.carica += euro;
@@ -17,9 +19,20 @@ class Smartphone {
     chiamata(min) {
         this.carica = this.carica - (this.costoMinuto * min);
         this.numeroChiamate++;
+        this.componentRegistro = {
+            id: this.id++,
+            durata: min,
+            dataeOra: new Date(),
+        };
+        this.registrochiamate.push(this.componentRegistro);
     }
     azzeraChiamate() {
         this.numeroChiamate = 0;
+        this.id = 0;
+        this.registrochiamate = [];
+    }
+    mostraRegistroChiamate() {
+        return this.registrochiamate;
     }
 }
 let simUtente1 = new Smartphone();
@@ -30,6 +43,7 @@ simUtente1.chiamata(10);
 simUtente1.chiamata(20);
 simUtente1.chiamata(3);
 console.log(simUtente1.getNumeroChiamate());
+simUtente1.mostraRegistroChiamate();
 console.log(simUtente1.numero404());
 console.log(simUtente1);
 simUtente1.azzeraChiamate();
@@ -42,6 +56,7 @@ simUtente2.chiamata(5);
 simUtente2.chiamata(20);
 simUtente2.chiamata(6);
 console.log(simUtente2.getNumeroChiamate());
+simUtente2.mostraRegistroChiamate();
 console.log(simUtente2.numero404());
 console.log(simUtente2);
 simUtente2.azzeraChiamate();
@@ -54,6 +69,7 @@ simUtente3.chiamata(5);
 simUtente3.chiamata(10);
 simUtente3.chiamata(6);
 console.log(simUtente3.getNumeroChiamate());
+simUtente3.mostraRegistroChiamate();
 console.log(simUtente3.numero404());
 console.log(simUtente3);
 simUtente3.azzeraChiamate();
