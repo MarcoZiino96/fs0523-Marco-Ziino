@@ -16,28 +16,28 @@ post:IPost[]=[
     "active":true
   },
   {
-    "id":0,
+    "id":1,
     "body": "Lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor lorem ipsum dolor",
     "title":"LOREM IPSUM",
     "active":true
   },
   {
-    "id":0,
-    "body": "Lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor lorem ipsum dolor",
+    "id":2,
+    "body": " Sono inattivo Lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor lorem ipsum dolor",
     "title":"LOREM IPSUM",
     "active":false
   },
   {
-    "id":0,
-    "body": "Lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor lorem ipsum dolor",
+    "id":3,
+    "body": " Sono inattivo Lorem ipsum dolor sit amet, consectetur adip, lorem ipsum dolor lorem ipsum dolor",
     "title":"LOREM IPSUM",
     "active":false
   }
 ]
-filterActive(){
+filterActive():IPost[] {
   return this.post.filter(p=>p.active === true);
  }
-filterInactive(){
+filterInactive():IPost[]{
   return this.post.filter(p=>p.active === false);
  }
 }

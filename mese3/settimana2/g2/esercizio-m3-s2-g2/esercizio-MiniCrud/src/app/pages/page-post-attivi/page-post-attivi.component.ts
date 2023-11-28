@@ -12,6 +12,6 @@ export class PagePostAttiviComponent implements OnInit {
    constructor(private postSvc:PostService){}
 
    ngOnInit(){
-    this.post = this.postSvc.post.filterActive();
+    this.post = this.postSvc.filterActive();
    }
 }

@@ -13,7 +13,7 @@ export class PagePostInattiviComponent implements OnInit {
   constructor(private postSvc:PostService){}
 
   ngOnInit(){
-   this.post = this.postSvc.post.filterInactive()
+   this.post = this.postSvc.filterInactive()
   }
 
 
