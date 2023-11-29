@@ -6,7 +6,7 @@ import { IPost } from './ipost';
 })
 export class PostService {
 
-  post:IPost[] = [
+  posts:IPost[] = [
 
     {
       id:0,
@@ -54,12 +54,37 @@ export class PostService {
       title:"Lorem Ipsum",
       active:false,
       type:"education"
+    },
+    {
+      id:6,
+      body:"lorem ipsum dolor sit amet, consectetur adipiscing aliquet et justo e euismod tempor",
+      title:"Lorem Ipsum",
+      active:false,
+      type:"education"
+    },
+    {
+      id:7,
+      body:"lorem ipsum dolor sit amet, consectetur adipiscing aliquet et justo e euismod tempor",
+      title:"Lorem Ipsum",
+      active:false,
+      type:"education"
     }
   ];
   filterActive():IPost[]{
-    return this.post.filter(p=>p.active);
+    return this.posts.filter(p=>p.active);
    }
   filterInactive():IPost[]{
-    return this.post.filter(p=>!p.active);
+    return this.posts.filter(p=>!p.active);
    }
+
+  toggleActiveMap(post:IPost){
+    this.posts = this.posts.map(p=>{
+      if(p.id == post.id) p.active = !p.active;
+      return p;
+    })
+  }
 }
+
+
+
+

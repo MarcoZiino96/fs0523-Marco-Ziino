@@ -12,6 +12,14 @@ export class ActiveComponent implements OnInit {
   posts:IPost[] = [];
   constructor(private postSvc:PostService){}
   ngOnInit(){
+   this.upDataPost();
+  }
+
+  upDataPost(){
     this.posts = this.postSvc.filterActive();
+  }
+  toggleStatus(post:IPost){
+    this.postSvc.toggleActiveMap(post);
+    this.upDataPost();
   }
 }

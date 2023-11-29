@@ -11,9 +11,16 @@ export class InactiveComponent implements OnInit {
 
   posts:IPost[] = [];
 
-  constructor(private postSvs:PostService){}
+  constructor(private postSvc:PostService){}
   ngOnInit(){
-    this.posts = this.postSvs.filterInactive()
-  }
+    this.upDataPost();
+   }
 
+   upDataPost(){
+     this.posts = this.postSvc.filterInactive();
+   }
+   toggleStatus(post:IPost){
+     this.postSvc.toggleActiveMap(post);
+     this.upDataPost();
+   }
 }
