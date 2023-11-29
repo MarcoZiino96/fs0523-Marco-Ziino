@@ -34,10 +34,10 @@ post:IPost[]=[
     "active":false
   }
 ]
-filterActive():IPost[] {
-  return this.post.filter(p=>p.active === true);
+filterActive():IPost[]{
+  return this.post.filter(p=>p.active);
  }
 filterInactive():IPost[]{
-  return this.post.filter(p=>p.active === false);
+  return this.post.filter(p=>!p.active);
  }
 }
