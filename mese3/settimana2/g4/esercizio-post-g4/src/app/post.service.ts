@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { IPost } from './ipost';
 
@@ -13,7 +14,8 @@ export class PostService {
       body:"lorem ipsum dolor sit amet, consectetur adipiscing aliquet et justo e euismod tempor",
       title:"Lorem Ipsum",
       active:true,
-      type:"news"
+      type:"news",
+      author:"Mario Rossi"
     },
 
     {
@@ -21,7 +23,8 @@ export class PostService {
       body:"lorem ipsum dolor sit amet, consectetur adipiscing aliquet et justo e euismod tempor",
       title:"Lorem Ipsum",
       active:true,
-      type:"news"
+      type:"news",
+      author:"Mario Rossi"
     },
 
     {
@@ -29,7 +32,8 @@ export class PostService {
       body:"lorem ipsum dolor sit amet, consectetur adipiscing aliquet et justo e euismod tempor",
       title:"Lorem Ipsum",
       active:true,
-      type:"politics"
+      type:"politics",
+      author:"Mario Rossi"
     },
 
     {
@@ -37,7 +41,8 @@ export class PostService {
       body:"lorem ipsum dolor sit amet, consectetur adipiscing aliquet et justo e euismod tempor",
       title:"Lorem Ipsum",
       active:false,
-      type:"politics"
+      type:"politics",
+      author:"Mario Rossi"
     },
 
     {
@@ -45,7 +50,8 @@ export class PostService {
       body:"lorem ipsum dolor sit amet, consectetur adipiscing aliquet et justo e euismod tempor",
       title:"Lorem Ipsum",
       active:false,
-      type:"education"
+      type:"education",
+      author:"Mario Rossi"
     },
 
     {
@@ -53,21 +59,24 @@ export class PostService {
       body:"lorem ipsum dolor sit amet, consectetur adipiscing aliquet et justo e euismod tempor",
       title:"Lorem Ipsum",
       active:false,
-      type:"education"
+      type:"education",
+      author:"Mario Rossi"
     },
     {
       id:6,
       body:"lorem ipsum dolor sit amet, consectetur adipiscing aliquet et justo e euismod tempor",
       title:"Lorem Ipsum",
       active:false,
-      type:"education"
+      type:"education",
+      author:"Mario Rossi"
     },
     {
       id:7,
       body:"lorem ipsum dolor sit amet, consectetur adipiscing aliquet et justo e euismod tempor",
       title:"Lorem Ipsum",
       active:false,
-      type:"education"
+      type:"education",
+      author:"Mario Rossi"
     }
   ];
   filterActive():IPost[]{

@@ -7,6 +7,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ActiveComponent } from './pages/active/active.component';
 import { InactiveComponent } from './pages/inactive/inactive.component';
 import { PostComponent } from './post/post.component';
+import { IlightDirective } from './ilight.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PostComponent } from './post/post.component';
     HomepageComponent,
     ActiveComponent,
     InactiveComponent,
-    PostComponent
+    PostComponent,
+    IlightDirective
   ],
   imports: [
     BrowserModule,
