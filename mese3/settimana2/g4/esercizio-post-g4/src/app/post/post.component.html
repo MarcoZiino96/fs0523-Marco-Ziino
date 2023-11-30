@@ -1,8 +1,8 @@
   <div class="card"
     [ngClass]="getClassObj()">
     <div class="card-body">
-      <h5 class="card-title">{{post.title}}</h5>
-      <p class="card-text"appIlight>{{post.body}}</p>
+      <h5 class="card-title appIlight"appIlight>{{post.title}}</h5>
+      <p class="card-text">{{post.body| uppercase}}</p>
       <p class="card-text"><b>{{post.type}}</b></p>
       <ng-content></ng-content>
     </div>

@@ -1,16 +1,17 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appIlight]'
 })
-export class IlightDirective {
+export class IlightDirective implements OnInit {
 
   constructor(
     private ref:ElementRef
     ) {}
 
-    ngOnInith(){
-      this.ref.nativeElement.style.backgroundColor = "green";
+
+    ngOnInit(){
+      this.ref.nativeElement.style.backgroundColor ="lightgreen";
     }
 
 }

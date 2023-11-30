@@ -8,6 +8,7 @@ import { ActiveComponent } from './pages/active/active.component';
 import { InactiveComponent } from './pages/inactive/inactive.component';
 import { PostComponent } from './post/post.component';
 import { IlightDirective } from './ilight.directive';
+import { DettaglioComponent } from './pages/dettaglio/dettaglio.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { IlightDirective } from './ilight.directive';
     ActiveComponent,
     InactiveComponent,
     PostComponent,
-    IlightDirective
+    IlightDirective,
+    DettaglioComponent
   ],
   imports: [
     BrowserModule,

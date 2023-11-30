@@ -79,6 +79,11 @@ export class PostService {
       author:"Mario Rossi"
     }
   ];
+
+  getAll(){
+    return this.posts
+  }
+
   filterActive():IPost[]{
     return this.posts.filter(p=>p.active);
    }
