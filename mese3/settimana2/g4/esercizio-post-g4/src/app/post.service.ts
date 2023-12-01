@@ -80,8 +80,8 @@ export class PostService {
     }
   ];
 
-  getAll(){
-    return this.posts
+  getById(id: number){
+    return this.posts.find(p => p.id === id)
   }
 
   filterActive():IPost[]{

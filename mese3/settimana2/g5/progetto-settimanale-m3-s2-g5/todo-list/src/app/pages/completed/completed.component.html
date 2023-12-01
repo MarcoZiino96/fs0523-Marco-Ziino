@@ -1,0 +1,14 @@
+<div class="container">
+
+  <h2>LISTA COSE DA FARE COMPLETATE</h2>
+
+  <div *ngIf="loadingTodos">
+    recupero task...
+  </div>
+
+  <ul>
+    <li *ngFor="let t of todos" (click)="toggleComplete(t)">
+      {{t.title}}
+    </li>
+  </ul>
+</div>
