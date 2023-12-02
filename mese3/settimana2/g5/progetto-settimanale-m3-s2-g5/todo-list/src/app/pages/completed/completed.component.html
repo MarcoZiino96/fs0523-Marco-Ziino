@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="load" *ngIf="!todos.length && !loadingTodos">
-    Opss... Non ci sono task...
+    Opss... Non ci sono tasks...
   </div>
 
   <div class="box-todo" *ngIf="todos.length">
@@ -10,11 +10,7 @@
 
     <div class="todo" *ngFor="let t of todos">
       {{t.title}}
-      <svg (click)="toggleComplete(t)" class="check" xmlns="http://www.w3.org/2000/svg" height="16" width="14"
-        viewBox="0 0 448 512">
-        <path fill="#08e70c"
-          d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-      </svg>
+       <button class="check" (click)="toggleComplete(t)">Passa a Todos</button>
       <div class="delete" (click)="deleteTodo(t.id)">
         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
           <path fill="#db0000"
@@ -34,7 +30,7 @@
   </div>
 
   <div class="load" *ngIf="loadingTodos ">
-    Recupero Task....
+    Recupero Tasks....
   </div>
 
 </div>

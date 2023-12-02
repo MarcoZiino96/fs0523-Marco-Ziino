@@ -7,33 +7,19 @@
   font-size: 1.5rem;
   color: rgb(98, 4, 98);
   margin-top:2rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
-input,
-.create {
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  border-radius: 30px;
-}
-
-.create {
-  background-color: rgba(98, 4, 98, 0.554);
-  color: white;
-  margin-left: 0.5rem;
-}
-
-button:hover,
 .delete:hover,
+.check:hover {
+  cursor: pointer;
+}
 .check:hover {
   transform: scale(1.2);
 }
-
-.delete:hover,
-.check:hover {
+.delete:hover{
   transform: scale(1.5);
-  cursor: pointer;
 }
 
 h2 {
@@ -51,7 +37,7 @@ h2 {
 .todo {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   margin-bottom:0.5rem ;
   background-color: rgba(98, 4, 98, 0.554);
   border-radius: 30px;
@@ -62,4 +48,10 @@ h2 {
 .delete,
 .check {
   margin-left: 1rem;
+}
+.check {
+  padding: 0.5rem;
+  background-color: #881B80;
+  border-radius: 30px;
+  color: white;
 }
