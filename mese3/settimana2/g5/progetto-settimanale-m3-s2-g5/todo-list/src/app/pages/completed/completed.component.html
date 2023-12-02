@@ -2,8 +2,11 @@
 
   <h2>LISTA COSE DA FARE COMPLETATE</h2>
 
-  <div *ngIf="loadingTodos">
-    recupero task...
+  <div class="load" *ngIf="loadingTodos " >
+    Recupero Task....
+  </div>
+  <div class="load" *ngIf="!todos.length && !loadingTodos">
+    Opss... Non ci sono task...
   </div>
 
   <ul>

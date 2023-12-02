@@ -20,7 +20,7 @@ export class TodoComponent {
 
 
   loading:boolean=false;
-  loadingTodos:boolean=false
+  loadingTodos:boolean=false;
 
   saveTodo(){
     this.loading=true;

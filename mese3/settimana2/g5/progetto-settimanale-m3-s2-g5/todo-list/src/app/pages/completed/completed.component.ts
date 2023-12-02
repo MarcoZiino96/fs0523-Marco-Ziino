@@ -25,15 +25,17 @@ export class CompletedComponent {
     this.todoSvc.createTodo(this.newTodo).then(res=>{
       this.newTodo = res;
       this.todos.push(res);
-
     })
 
   }
 
   ngOnInit(){
     this.loadingTodos=true;
-    this.todoSvc.getAllTodos().then(t=>this.todos=t.filter(el=>el.completed));
-    this.loadingTodos=false;
+    this.todoSvc.getAllTodos().then(t=>
+      {this.todos=t.filter(el=>el.completed)
+       this.loadingTodos=false;
+      }
+      );
   }
 
   toggleComplete(todo:Todo){

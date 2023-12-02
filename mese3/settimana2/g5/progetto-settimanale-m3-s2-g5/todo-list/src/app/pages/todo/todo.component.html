@@ -11,7 +11,8 @@
   <div class="load" *ngIf="loadingTodos" >
     Recupero Task....
   </div>
-  <div class="load" *ngIf="!loadingTodos && !todos.length">
+
+  <div class="load" *ngIf="!todos.length && !loadingTodos && !loading">
     Opss... Non ci sono task...
   </div>
 
