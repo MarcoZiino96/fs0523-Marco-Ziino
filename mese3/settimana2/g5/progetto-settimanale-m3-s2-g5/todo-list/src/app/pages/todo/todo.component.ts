@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { ITodo } from '../../Models/i-todo';
 import { TodoService } from '../../todos.service';
-import { Todo } from '../../Models/todo';
 
 @Component({
   selector: '.app-todo',
@@ -9,18 +9,20 @@ import { Todo } from '../../Models/todo';
 })
 export class TodoComponent {
 
-  todos:Todo[] = [];
+  todos:ITodo[] = [];
 
 
   constructor( private todoSvc:TodoService){}
 
-  newTodo:Partial<Todo>={
+  newTodo:Partial<ITodo>={
     completed:false
   }
 
 
   loading:boolean=false;
   loadingTodos:boolean=false;
+  loadingDelete:boolean=false;
+  loadingToggle:boolean=false;
 
   saveTodo(){
     this.loading=true;
@@ -43,10 +45,21 @@ export class TodoComponent {
     )
   }
 
-  toggleComplete(todo:Todo){
+  toggleComplete(todo:ITodo){
+    this.loadingToggle = true;
     todo.completed = !todo.completed;
     this.todoSvc.updateTodo(todo).then(res=>{
       this.todos=this.todos.filter(el=>!el.completed)
+      this.loadingToggle=false;
+    })
+  }
+
+  deleteTodo(id:number|undefined){
+    if(!id) return
+    this.loadingDelete=true
+    this.todoSvc.delete(id).then(res=>{
+      this.todos=this.todos.filter(el=> el.id != id)
+      this.loadingDelete=false;
     })
   }
 }

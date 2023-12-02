@@ -1,19 +1,65 @@
-.container{
+.container {
   text-align: center;
   margin-top: 5rem;
 }
 
-h2{
+.load {
+  font-size: 1.5rem;
   color: rgb(98, 4, 98);
-  padding-left: 2rem;
+  margin-top:2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-ul{
-  list-style-type:none;
+input,
+.create {
   font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 30px;
+}
+
+.create {
+  background-color: rgba(98, 4, 98, 0.554);
+  color: white;
+  margin-left: 0.5rem;
+}
+
+button:hover,
+.delete:hover,
+.check:hover {
+  transform: scale(1.2);
+}
+
+.delete:hover,
+.check:hover {
+  transform: scale(1.5);
   cursor: pointer;
 }
-.load{
-  font-size:1.5rem;
-  color: rgb(12, 131, 171);
+
+h2 {
+  color: rgb(98, 4, 98);
+}
+
+.box-todo {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0 auto;
+  width: 50%;
+
+}
+
+.todo {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom:0.5rem ;
+  background-color: rgba(98, 4, 98, 0.554);
+  border-radius: 30px;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+.delete,
+.check {
+  margin-left: 1rem;
 }
