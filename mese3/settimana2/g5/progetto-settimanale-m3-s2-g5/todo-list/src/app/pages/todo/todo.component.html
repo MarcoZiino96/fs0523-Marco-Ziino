@@ -1,5 +1,17 @@
 <div class="container">
 
+  <div class="load" *ngIf="loadingDelete">
+    Eliminazione in corso.....
+  </div>
+
+  <div class="load" *ngIf="loading">
+    Salvataggio Task...
+  </div>
+
+  <div class="load" *ngIf="loadingToggle">
+    Passaggio task in completed..
+  </div>
+
   <input placeholder="Scrivi il promemoria...." type="text" name="promemoria" [(ngModel)]="newTodo.title">
   <button class="create" (click)="saveTodo()">aggiungi</button>
 
@@ -31,18 +43,6 @@
       </div>
     </div>
 
-  </div>
-
-  <div class="load" *ngIf="loadingDelete">
-    Eliminazione in corso.....
-  </div>
-
-  <div class="load" *ngIf="loading">
-    Salvataggio Task...
-  </div>
-
-  <div class="load" *ngIf="loadingToggle">
-    Passaggio task in completed..
   </div>
 
 </div>

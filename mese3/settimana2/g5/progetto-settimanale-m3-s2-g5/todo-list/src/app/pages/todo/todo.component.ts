@@ -25,6 +25,9 @@ export class TodoComponent {
   loadingToggle:boolean=false;
 
   saveTodo(){
+    if (this.newTodo.title == ""){
+      return alert("Non hai compilato il campo!")
+    }else{
     this.loading=true;
     this.todoSvc.createTodo(this.newTodo).then(res=>{
       this.todos.push(res);
@@ -34,7 +37,7 @@ export class TodoComponent {
       }
       this.loading=false;
     })
-  }
+  }}
 
   ngOnInit(){
     this.loadingTodos=true;
@@ -54,8 +57,7 @@ export class TodoComponent {
     })
   }
 
-  deleteTodo(id:number|undefined){
-    if(!id) return
+  deleteTodo(id:number){
     this.loadingDelete=true
     this.todoSvc.delete(id).then(res=>{
       this.todos=this.todos.filter(el=> el.id != id)

@@ -5,10 +5,11 @@
 
 .load {
   font-size: 1.5rem;
-  color: rgb(98, 4, 98);
-  margin-top:2rem;
+  color: rgb(13, 13, 174);
+  margin-top:1rem;
   font-size: 2rem;
   font-weight: bold;
+  margin-left: 1rem;
 }
 
 input,
@@ -19,19 +20,19 @@ input,
 }
 
 .create {
-  background-color: rgba(98, 4, 98, 0.554);
+  background-color: #881B80;
   color: white;
   margin-left: 0.5rem;
 }
 
-button:hover,
-.delete:hover,
-.check:hover {
+.create:hover {
   transform: scale(1.2);
+  cursor: pointer;
 }
 
+
 .delete:hover,
-.check:hover {
+.check:hover{
   transform: scale(1.5);
   cursor: pointer;
 }

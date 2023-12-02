@@ -3,6 +3,13 @@
   <div class="load" *ngIf="!todos.length && !loadingTodos">
     Opss... Non ci sono tasks...
   </div>
+  <div class="load" *ngIf="loadingToggle">
+    Passaggio task in Todos..
+  </div>
+
+  <div class="load" *ngIf="loadingDelete">
+    Eliminazione in corso.....
+  </div>
 
   <div class="box-todo" *ngIf="todos.length">
 
@@ -19,14 +26,6 @@
       </div>
     </div>
 
-  </div>
-
-  <div class="load" *ngIf="loadingToggle">
-    Passaggio task in Todos..
-  </div>
-
-  <div class="load" *ngIf="loadingDelete">
-    Eliminazione in corso.....
   </div>
 
   <div class="load" *ngIf="loadingTodos ">
