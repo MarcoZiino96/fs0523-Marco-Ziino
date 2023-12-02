@@ -5,7 +5,7 @@
 
 .load {
   font-size: 1.5rem;
-  color: rgb(13, 13, 174);
+  color: #881B80;
   margin-top:2rem;
   font-size: 2rem;
   font-weight: bold;
@@ -15,9 +15,13 @@
 .check:hover {
   cursor: pointer;
 }
+
 .check:hover {
   transform: scale(1.2);
+  color: #881B80;
+  font-weight: bold;
 }
+
 .delete:hover{
   transform: scale(1.5);
 }
@@ -45,13 +49,18 @@ h2 {
   padding: 0.5rem;
 }
 
+.todo:hover{
+  background-color: #881B80;
+  transform: scale(1.2);
+}
+
 .delete,
 .check {
   margin-left: 1rem;
 }
 .check {
   padding: 0.5rem;
-  background-color: #881B80;
+  background-color: violet;
   border-radius: 30px;
   color: white;
 }

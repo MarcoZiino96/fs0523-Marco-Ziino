@@ -1,14 +1,9 @@
 {
   "todos": [
     {
-      "title": "prendere il pane",
-      "completed": false,
-      "id": 4
-    },
-    {
       "completed": false,
       "title": "prendere il pane",
-      "id": 5
+      "id": 1
     }
   ]
 }

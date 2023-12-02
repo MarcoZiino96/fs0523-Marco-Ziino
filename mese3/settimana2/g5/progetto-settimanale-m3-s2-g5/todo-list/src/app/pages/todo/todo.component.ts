@@ -24,9 +24,10 @@ export class TodoComponent {
   loadingDelete:boolean=false;
   loadingToggle:boolean=false;
 
+
   saveTodo(){
     if (this.newTodo.title == ""){
-      return alert("Non hai compilato il campo!")
+      return alert(" Compila il campo promemoria!")
     }else{
     this.loading=true;
     this.todoSvc.createTodo(this.newTodo).then(res=>{
