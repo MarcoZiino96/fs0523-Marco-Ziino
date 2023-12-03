@@ -48,6 +48,7 @@ h2 {
   border-radius: 30px;
   max-width: 100%;
   padding: 0.5rem;
+  transition:.2s linear;
 }
 
 .todo:hover{
@@ -59,7 +60,9 @@ h2 {
 .check,
 .edit{
   margin-left: 1rem;
+  transition:.2s linear;
 }
+
 .check {
   padding: 0.5rem;
   background-color: violet;
