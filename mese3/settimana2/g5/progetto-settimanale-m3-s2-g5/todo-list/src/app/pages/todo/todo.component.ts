@@ -58,7 +58,9 @@ export class TodoComponent {
     })
   }
 
-  deleteTodo(id:number){
+  deleteTodo(id:number|undefined){
+    if (!id)
+    return
     this.loadingDelete=true
     this.todoSvc.delete(id).then(res=>{
       this.todos=this.todos.filter(el=> el.id != id)

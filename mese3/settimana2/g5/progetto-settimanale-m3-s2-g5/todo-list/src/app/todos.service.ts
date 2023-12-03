@@ -15,7 +15,6 @@ export class TodoService {
   }
 
   createTodo(todo:Partial<ITodo>):Promise<ITodo>{
-
     return fetch(this.urlApi,{
       method:'POST',
       headers:{
@@ -44,8 +43,9 @@ export class TodoService {
     }).then(res => res.json())
   }
 
-
-
+  getById(id:number):Promise<ITodo>{
+    return fetch(this.urlApi +`/${id}`).then(res => res.json())
+  }
 
 }
 
