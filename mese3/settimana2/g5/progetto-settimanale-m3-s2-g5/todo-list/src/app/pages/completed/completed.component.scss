@@ -22,7 +22,8 @@
   font-weight: bold;
 }
 
-.delete:hover{
+.delete:hover,
+.edit:hover {
   transform: scale(1.5);
 }
 
@@ -55,7 +56,8 @@ h2 {
 }
 
 .delete,
-.check {
+.check,
+.edit{
   margin-left: 1rem;
 }
 .check {
