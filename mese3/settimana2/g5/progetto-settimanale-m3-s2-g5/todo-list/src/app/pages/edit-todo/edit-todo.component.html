@@ -1,4 +1,16 @@
 <div class="container">
-  <input placeholder="Scrivi il promemoria...." type="text" name="promemoria" [(ngModel)]="todo.title">
-  <button class="edit" (click)="saveTodo()">Modifica</button>
+
+  <div class="load" *ngIf="!todo">
+    Recupero task...
+  </div>
+
+  <div class="load" *ngIf="loadEdit" >
+    Modifica in corso...
+  </div>
+
+  <div *ngIf="todo">
+    <input placeholder="Scrivi il promemoria...." type="text" name="promemoria" [(ngModel)]="todo.title">
+    <button class="edit" (click)="saveTodo()">Modifica</button>
+  </div>
+
 </div>

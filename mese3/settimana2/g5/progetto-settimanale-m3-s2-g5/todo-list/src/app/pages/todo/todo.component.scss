@@ -6,10 +6,9 @@
 .load {
   font-size: 1.5rem;
   color: #881B80;
-  margin-top:1rem;
+  margin:2rem 0;
   font-size: 2rem;
   font-weight: bold;
-  margin-left: 1rem;
 }
 
 input,
@@ -69,7 +68,8 @@ h2 {
 }
 
 .delete,
-.check {
+.check,
+.edit {
   margin-left: 1rem;
 }
 

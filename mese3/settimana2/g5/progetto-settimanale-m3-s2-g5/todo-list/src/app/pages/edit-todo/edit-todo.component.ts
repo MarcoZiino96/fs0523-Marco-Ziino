@@ -15,7 +15,8 @@ export class EditTodoComponent {
     private router:Router
   ) { }
 
-  todo!: ITodo
+  todo!: ITodo;
+  loadEdit:boolean=false;
 
   ngOnInit() {
     this.route.params.subscribe((params: any) => {
@@ -24,10 +25,12 @@ export class EditTodoComponent {
   }
 
   saveTodo(){
+    this.loadEdit=true;
     this.todoSvc.updateTodo(this.todo).then(res=>{
+      this.loadEdit=false;
       setTimeout(()=>{
           this.router.navigate(['/'])
-         },3000)
+         },1500)
     })
   }
 }

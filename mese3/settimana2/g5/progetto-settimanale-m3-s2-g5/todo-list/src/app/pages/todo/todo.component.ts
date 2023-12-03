@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ITodo } from '../../Models/i-todo';
 import { TodoService } from '../../todos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: '.app-todo',
@@ -12,7 +13,10 @@ export class TodoComponent {
   todos:ITodo[] = [];
 
 
-  constructor( private todoSvc:TodoService){}
+  constructor(
+    private todoSvc:TodoService,
+    private router:Router
+    ){}
 
   newTodo:Partial<ITodo>={
     completed:false
@@ -55,6 +59,9 @@ export class TodoComponent {
     this.todoSvc.updateTodo(todo).then(res=>{
       this.todos=this.todos.filter(el=>!el.completed)
       this.loadingToggle=false;
+      setTimeout(()=>{
+        this.router.navigate(['completed'])
+       },1500)
     })
   }
 

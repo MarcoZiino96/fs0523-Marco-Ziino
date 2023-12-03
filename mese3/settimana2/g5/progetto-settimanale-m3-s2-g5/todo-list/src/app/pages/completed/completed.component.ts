@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TodoService } from '../../todos.service';
 import { ITodo } from '../../Models/i-todo';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,10 @@ export class CompletedComponent {
   todos:ITodo[] = [];
 
 
-  constructor( private todoSvc:TodoService){}
+  constructor(
+    private todoSvc:TodoService,
+    private router:Router
+    ){}
 
   newTodo:Partial<ITodo>={
     completed:false
@@ -28,7 +32,6 @@ export class CompletedComponent {
       this.newTodo = res;
       this.todos.push(res);
     })
-
   }
 
   ngOnInit(){
@@ -46,6 +49,9 @@ export class CompletedComponent {
     this.todoSvc.updateTodo(todo).then(res=>{
       this.todos=this.todos.filter(el=>el.completed)
       this.loadingToggle=false;
+      setTimeout(()=>{
+        this.router.navigate(['/'])
+       },1500)
     })
   }
   deleteTodo(id:number|undefined){

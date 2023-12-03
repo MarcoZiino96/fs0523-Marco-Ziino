@@ -2,8 +2,18 @@
   "todos": [
     {
       "completed": false,
-      "title": "prendere il p",
+      "title": "prendere il pane",
       "id": 1
+    },
+    {
+      "completed": true,
+      "title": "prendere il pane",
+      "id": 2
+    },
+    {
+      "completed": false,
+      "title": "andare dalla nonna",
+      "id": 3
     }
   ]
 }
