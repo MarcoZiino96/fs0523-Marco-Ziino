@@ -1,9 +1,14 @@
 {
   "todos": [
     {
-      "completed": false,
+      "completed": true,
       "title": "andare dalla nonna",
       "id": 1
+    },
+    {
+      "title": "Andare dalla nonna",
+      "completed": false,
+      "id": 3
     }
   ]
 }
