@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { IProduct } from '../../Modules/i-product';
 import { ProductService } from '../../product.service';
+import { IProduct } from '../../Moduls/i-product';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
@@ -16,7 +16,15 @@ export class HomepageComponent {
   ){}
 
   ngOnInit(){
-    this.productSvc.getAll().subscribe(data => this.products = data)
+    this.productSvc.getAll().subscribe(data => this.products = data);
+  }
+
+  addToShop(product:IProduct){
+    this.productSvc.addToShop(product)
+  }
+
+  addFavorite(product:IProduct){
+    this.productSvc.addFavorite(product)
   }
 
 }

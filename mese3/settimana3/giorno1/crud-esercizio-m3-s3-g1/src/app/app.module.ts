@@ -7,13 +7,20 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { PreferitiComponent } from './pages/preferiti/preferiti.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ShopComponent } from './components/shop/shop.component';
+import { CardFavouriteComponent } from './components/card-favourite/card-favourite.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomepageComponent,
-    PreferitiComponent
+    PreferitiComponent,
+    ShopComponent,
+    CardFavouriteComponent
+
   ],
   imports: [
     BrowserModule,
