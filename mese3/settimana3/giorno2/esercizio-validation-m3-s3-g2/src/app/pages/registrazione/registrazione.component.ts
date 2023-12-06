@@ -41,7 +41,7 @@ export class RegistrazioneComponent {
   }
 
   isValidAndTouched(fieldName:string){
-    return this.isValid(fieldName) && this.isTouched(fieldName)
+    return !this.isValid(fieldName) && this.isTouched(fieldName)
   }
 
 }
