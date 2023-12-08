@@ -25,7 +25,7 @@ export class RegisterComponent {
   save(){
     this.authSvc.signUp(this.registerData)
     .subscribe(data => {
-        this.router.navigate(['auth/login'])
+        this.router.navigate(['/auth/login'])
 
     })
   }
