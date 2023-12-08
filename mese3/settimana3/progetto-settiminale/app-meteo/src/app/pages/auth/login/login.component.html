@@ -3,9 +3,11 @@
   <h3 class="text-center fw-bold mt-5">Pagina di Accesso</h3>
 
   <form>
-    <input class="form-control mb-2 " required placeholder="inserisci la tua email" name="email" type="email">
-    <input class="form-control mb-2 " required placeholder="inserisci il tuo password" name="password" type="password">
-    <button class="btn btn-primary text-center">Accedi</button>
+    <input [(ngModel)]="loginData.email" class="form-control mb-2 " required placeholder="inserisci la tua email" name="email" type="email">
+    <input [(ngModel)]="loginData.password" class="form-control mb-2 " required placeholder="inserisci il tuo password" name="password" type="password">
+    <button
+    (click)="save()"
+    class="btn btn-primary text-center">Accedi</button>
   </form>
 
 </div>

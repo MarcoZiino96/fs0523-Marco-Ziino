@@ -1,5 +1,18 @@
 {
-  "users":[
-
+  "users": [
+    {
+      "email": "nuzyc@mailinator.com",
+      "password": "$2a$10$m.qrIPmw32sXqUxdqGFAb.avcBoG3jHAOylxXOZ1ZLKGyoLdQ4vAy",
+      "nome": "Maxime nihil et et i",
+      "cognome": "Deserunt animi cons",
+      "id": 1
+    },
+    {
+      "email": "zycatoq@mailinator.com",
+      "password": "$2a$10$YJgakpF.wOv6GtMXBYq52exjS7FPE2cPoju5X7Tb0vDQN9g6Pv.ry",
+      "nome": "Qui officia voluptat",
+      "cognome": "Mollitia ad beatae h",
+      "id": 2
+    }
   ]
 }
