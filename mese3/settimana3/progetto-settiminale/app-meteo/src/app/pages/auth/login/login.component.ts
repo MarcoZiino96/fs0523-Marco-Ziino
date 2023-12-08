@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { ILogin } from '../../Models/i-login';
+import { ILogin } from '../../../Models/i-login';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,8 +16,8 @@ export class LoginComponent {
   ){}
 
   loginData:ILogin ={
-    email: '',
-    password: ''
+    email: 'caqoxiry@mailinator.com',
+    password: '55555'
   }
 
   save(){

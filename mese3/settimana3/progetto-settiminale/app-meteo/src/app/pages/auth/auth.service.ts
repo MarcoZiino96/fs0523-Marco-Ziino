@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
-import { IAccessData } from '../Models/i-access-data';
-import { IRegister } from '../Models/i-register';
+import { IAccessData } from '../../Models/i-access-data';
+import { IRegister } from '../../Models/i-register';
 import { BehaviorSubject, Observable, map, tap } from 'rxjs';
-import { ILogin } from '../Models/i-login';
+import { ILogin } from '../../Models/i-login';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import {  Router } from '@angular/router';
 

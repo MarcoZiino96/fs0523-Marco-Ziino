@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IRegister } from '../../Models/i-register';
+import { IRegister } from '../../../Models/i-register';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 
