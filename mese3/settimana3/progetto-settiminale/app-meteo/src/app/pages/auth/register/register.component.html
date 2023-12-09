@@ -2,14 +2,47 @@
 
   <h3 class="text-center fw-bold mt-5">Pagina di registrazione</h3>
 
-  <form>
-    <input [(ngModel)]="registerData.nome" class=" form-control mb-2" required placeholder="inserisci il tuo nome" name="nome" type="text">
-    <input [(ngModel)]="registerData.cognome" class="form-control mb-2 " required placeholder="inserisci il tuo cognome" name="cognome" type="text">
-    <input [(ngModel)]="registerData.email" class="form-control mb-2 " required placeholder="inserisci la tua email" name="email" type="email">
-    <input [(ngModel)]="registerData.password" class="form-control mb-2 " required placeholder="inserisci il tuo password" name="password" type="password">
-    <button
-    (click)="save()"
-    class="btn btn-primary text-center">Registrami</button>
+  <form #f="ngForm">
+    <input #nome="ngModel" ngModel name="nome" class=" form-control mb-2" required placeholder="inserisci il tuo nome"
+      type="text">
+
+    <div *ngIf="isIncorrect(nome)" class="alert alert-danger">
+      Devi inserire il nome
+    </div>
+
+    <input #cognome="ngModel" ngModel name="cognome" class="form-control mb-2 " required
+      placeholder="inserisci il tuo cognome" type="text">
+
+    <div *ngIf="isIncorrect(cognome)" class="alert alert-danger">
+      Devi inserire il cognome
+    </div>
+
+    <input #email="ngModel" ngModel name="email" class="form-control mb-2 " required [pattern]="emailRegex"
+      placeholder="inserisci la tua email" type="email">
+
+    <div *ngIf="isEmail(email)" class="alert alert-danger">
+      la email non è valida
+    </div>
+
+    <div *ngIf="isIncorrect(email)" class="alert alert-danger">
+      Devi inserire la email
+    </div>
+
+    <input #password="ngModel" ngModel name="password" class="form-control mb-2 " required placeholder="inserisci il tuo password"
+      type="password">
+
+      <div *ngIf="isIncorrect(password)" class="alert alert-danger">
+        Devi inserire la password
+      </div>
+
+
+    <button [disabled]="f.invalid" (click)="save()" class="btn btn-primary text-center">Registrami
+    </button>
+
+    <div *ngIf="f.invalid && f.dirty" class="alert alert-danger">
+      Compila tutti i campi correttamente
+    </div>
+
   </form>
 
 </div>

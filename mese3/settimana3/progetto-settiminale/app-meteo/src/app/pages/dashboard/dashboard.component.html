@@ -2,13 +2,13 @@
 
 
 <div (click)="logOut()" class="d-flex justify-content-around mt-3">
-
   <div>
-    <a routerLink="/preferiti">Preferiti</a>
+    <a routerLink="/dashboard/preferiti">Preferiti</a>
   </div>
 
   <div>
     <button class="btn btn-danger me-5">Logout</button>
   </div>
-
 </div>
+
+<router-outlet></router-outlet>

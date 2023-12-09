@@ -31,8 +31,8 @@ export class AuthService {
   loginUrl:string = environment.apiUrl + '/login'
 
 
-  signUp(data:IRegister):Observable<IAccessData>{
-   return this.http.post<IAccessData>(this.registerUrl, data)
+  signUp(registerData:IRegister):Observable<IAccessData>{
+   return this.http.post<IAccessData>(this.registerUrl, registerData)
   }
 
   login(data:ILogin):Observable<IAccessData>{
