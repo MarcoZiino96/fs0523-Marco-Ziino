@@ -1,5 +1,60 @@
 {
   "users": [
-
+    {
+      "email": "xygujeziz@mailinator.com",
+      "password": "$2a$10$Hsyio5p/qWljYryQMiKvYuhx7H/qWWp/2e5331saT.oLayrofmN1u",
+      "nome": "Similique consectetu",
+      "cognome": "Alias amet fugiat s",
+      "id": 1
+    },
+    {
+      "email": "danoq@mailinator.com",
+      "password": "$2a$10$2RJ7TUoItX8kPbKlnDIi/O52lwD3sxeQsVqhvzUYDYXsJv7vxLQSm",
+      "nome": "In qui obcaecati vol",
+      "cognome": "Dolor sequi similiqu",
+      "id": 2
+    },
+    {
+      "email": "byros@mailinator.com",
+      "password": "$2a$10$AYWFDH12cp2udgw0RAdxDeEZWdxk4wxDrtKYQhhFhB3zcTS3gdOne",
+      "nome": "Fuga Deserunt aliqu",
+      "cognome": "Vero quae magni mole",
+      "id": 3
+    },
+    {
+      "email": "rinyw@mailinator.com",
+      "password": "$2a$10$GtUEXs5N8pUo8K.NfZDF7ONy316wLL2XZ2LTpi3WRhrmpvE1dYYIy",
+      "nome": "Dolorum sapiente nih",
+      "cognome": "Voluptas deserunt in",
+      "id": 4
+    },
+    {
+      "email": "lopogup@mailinator.com",
+      "password": "$2a$10$lH4HcgOWEeZ3gnxmYQr6U.Jm2CulMFW21dXqBlb6YwJXHZN1Bmzku",
+      "nome": "Harum sed cumque rer",
+      "cognome": "Blanditiis aliqua R",
+      "id": 5
+    },
+    {
+      "email": "nuzyc@mailinator.com",
+      "password": "$2a$10$6JSv8NGN1v/Dh6t8xkmWJe9wua1HnzBYmXyb58AbiQafPCBrCDczK",
+      "nome": "isabella",
+      "cognome": "trischitta",
+      "id": 6
+    }
+  ],
+  "iLovecity": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    }
   ]
 }

@@ -14,7 +14,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let d of cityArr.list;">
-        <td>{{d.dt_txt}}</td>
+        <td>{{d.dt_txt|date:'dd-MM / HH:mm'}}</td>
         <th> <img [srcset]="iconUrl+d.weather[0].icon+'.png'" class="card-img-top img-fluid" alt="iconWeather"></th>
         <td>{{d.weather[0].description}}</td>
         <td>{{d.main.temp}}°</td>

@@ -33,6 +33,17 @@ export class MeteoService {
     let idApi = `http://api.openweathermap.org/data/2.5/forecast?id=${id}&lang=it&appid=${environment.apiKey}&units=metric`;
     return this.http.get<IFiveForecastCity>(idApi);
   }
+
+  addILoveCity(obj: ICurrentDayForecast): Observable<ICurrentDayForecast> {
+    return this.http.post<ICurrentDayForecast>(environment.loveUrl, obj);
+  }
+  getILoveCity(id:number):Observable<ICurrentDayForecast[]>{
+    return this.http.get<ICurrentDayForecast[]>(environment.loveUrl)
+  }
+  deleteFavourite(id:number):Observable<ICurrentDayForecast>{
+    return this.http.delete<ICurrentDayForecast>(`${environment.loveUrl}/${id}`)
+  }
+
 }
 
 
