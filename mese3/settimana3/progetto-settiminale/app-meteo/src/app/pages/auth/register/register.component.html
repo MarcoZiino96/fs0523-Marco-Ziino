@@ -28,16 +28,17 @@
       Devi inserire la email
     </div>
 
-    <input #password="ngModel" ngModel name="password" class="form-control mb-2 " required placeholder="inserisci il tuo password"
-      type="password">
+    <input #password="ngModel" ngModel name="password" class="form-control mb-2 " required
+      placeholder="inserisci il tuo password" type="password">
 
-      <div *ngIf="isIncorrect(password)" class="alert alert-danger">
-        Devi inserire la password
-      </div>
+    <div *ngIf="isIncorrect(password)" class="alert alert-danger">
+      Devi inserire la password
+    </div>
 
-
-    <button [disabled]="f.invalid" (click)="save()" class="btn btn-primary text-center">Registrami
-    </button>
+    <div class="text-center">
+      <button [disabled]="f.invalid" (click)="save()" class="btn btn-primary text-center">Registrami
+      </button>
+    </div>
 
     <div *ngIf="f.invalid && f.dirty" class="alert alert-danger">
       Compila tutti i campi correttamente

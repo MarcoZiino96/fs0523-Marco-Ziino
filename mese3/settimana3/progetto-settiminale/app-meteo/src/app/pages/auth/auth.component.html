@@ -1,18 +1,17 @@
 <div class="container">
 
-  <h1 class="text-center">Accedi o registrati</h1>
+  <h1 class="text-center my-5">Accedi o Registrati</h1>
 
   <div class="row align-items-end">
-    <div class="col-6">
+    <div class="col-6 text-center">
 
-      <h3></h3>
+      <p class="fw-bold text-tertiary   mb-3">Sei gia registrato?Clicca su accedi</p>
       <a routerLink="/auth/login" class="btn btn-success">Accedi</a>
     </div>
-    <div class="col-6">
-      <h3></h3>
+    <div class="col-6 text-center">
+      <p class="fw-bold text-tertiary   mb-3">Non sei registrato? Clicca su Registrati</p>
       <a routerLink="/auth/register" class="btn btn-success">Registrati</a>
     </div>
   </div>
-
   <router-outlet></router-outlet>
 </div>

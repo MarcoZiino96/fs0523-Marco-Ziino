@@ -1,4 +1,4 @@
-export interface IForecastCity {
+export interface IFiveForecastCity {
   cod: string
   message: number
   cnt: number

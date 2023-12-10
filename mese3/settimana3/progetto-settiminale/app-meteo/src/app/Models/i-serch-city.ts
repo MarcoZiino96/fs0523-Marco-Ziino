@@ -1,7 +1,6 @@
 
-export type ISerchCity = Iserch []
 
-export interface Iserch {
+export interface ISearchCity {
   name: string
   local_names: LocalNames
   lat: number
@@ -163,4 +162,5 @@ export interface LocalNames {
   cr: string
   iu: string
 }
+
 

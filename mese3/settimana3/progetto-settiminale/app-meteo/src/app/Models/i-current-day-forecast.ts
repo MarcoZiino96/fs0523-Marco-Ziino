@@ -1,4 +1,4 @@
- export interface CurrentDayForecast {
+ export interface ICurrentDayForecast {
     coord: Coord
     weather: Weather[]
     base: string
@@ -16,8 +16,8 @@
   }
 
   export interface Coord {
+    lat: number,
     lon: number
-    lat: number
   }
 
   export interface Weather {

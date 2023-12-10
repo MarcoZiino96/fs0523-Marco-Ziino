@@ -69,8 +69,8 @@ export class AuthService {
     let accessData:IAccessData = JSON.parse(userJson)
     if(this.jwtHelper.isTokenExpired(accessData.accessToken)) return;
 
-    this.autoLogout(accessData.accessToken)
     this.authSub.next(accessData)
+    this.autoLogout(accessData.accessToken)
    }
 
 }

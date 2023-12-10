@@ -1,14 +1,71 @@
-
-
-
-<div (click)="logOut()" class="d-flex justify-content-around mt-3">
+<div class="d-flex justify-content-around mt-3">
   <div>
-    <a routerLink="/dashboard/preferiti">Preferiti</a>
+    <a class="nav-link active btn btn-primary px-3 py-2" routerLink="/dashboard/preferiti">Preferiti</a>
   </div>
 
   <div>
-    <button class="btn btn-danger me-5">Logout</button>
+    <button (click)="logOut()" class="btn btn-danger me-5">Logout</button>
   </div>
+
+</div>
+
+<div class="container my-5">
+
+  <form class="d-flex mb-5" role="search">
+    <input [(ngModel)]="city" name="cercaCittà" class="form-control me-2" type="search" placeholder="Cerca la città..">
+    <button (click)="getActualMeteoCard()" class="btn btn-outline-success">Cerca</button>
+  </form>
+
+
+
+  <div class="row fs-md-4">
+
+    <div class="col-12 col-md-6 col-lg-4 mb-2" *ngFor="let c of arrCity">
+
+      <div class="card p-3">
+
+        <div class="row">
+
+          <div class="col-6 text">
+            <div class="col-12">
+              <h5 class="card-title fw-bold">{{c.sys.country}}</h5>
+              <p class="card-text fw-bold">{{c.name}}</p>
+            </div>
+            <div class="col12">
+              <p class="card-text fw-semibold">{{c.weather[0].description}}</p>
+            </div>
+          </div>
+
+          <div class="col-6 img">
+            <img [srcset]="iconUrl+c.weather[0].icon+'.png'" class="card-img-top img-fluid" alt="iconWeather">
+          </div>
+
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 mb-3">
+                <div class="row">
+                  <div class="col-4"><span class="card-text bg-tertiary fw-semibold">Temp:{{c.main.temp}}°</span></div>
+                  <div class="col-4"><span class="card-text bg-tertiary fw-semibold">Min:{{c.main.temp_min}}°</span></div>
+                  <div class="col-4"><span class="card-text bg-tertiary fw-semibold">Max:{{c.main.temp_max}}°</span></div>
+                </div>
+              </div>
+
+              <div class="col-6 ">
+                <p class="card-text fw-semibold">💧Umidità:{{c.main.humidity}}%</p>
+              </div>
+              <div class="col-6  ">
+                <p class="card-text fw-semibold">🌪:{{c.wind.speed}}m/s</p>
+              </div>
+            </div>
+          </div>
+          <a [routerLink]="['/dashboard/fiveWeather',c.id]" class="btn btn-info text-white fw-bold">Scopri di più</a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
 <router-outlet></router-outlet>
