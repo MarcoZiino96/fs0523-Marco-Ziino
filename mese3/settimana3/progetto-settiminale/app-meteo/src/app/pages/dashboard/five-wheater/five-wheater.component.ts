@@ -1,3 +1,4 @@
+import { AuthService } from './../../auth/auth.service';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MeteoService } from '../../../meteo.service';
@@ -13,7 +14,8 @@ export class FiveWheaterComponent {
 
   constructor(
     private route:ActivatedRoute,
-    private meteoSvc:MeteoService
+    private meteoSvc:MeteoService,
+    private authSvc:AuthService
     ){}
 
   cityArr!:IFiveForecastCity
@@ -31,5 +33,9 @@ ngOnInit(){
      }))
   })
 
+}
+
+logOut() {
+  this.authSvc.logOut()
 }
 }

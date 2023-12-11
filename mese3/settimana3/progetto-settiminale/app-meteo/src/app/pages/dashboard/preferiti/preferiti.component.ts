@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { MeteoService } from '../../../meteo.service';
 import {  ICurrentDayForecast } from '../../../Models/i-current-day-forecast';
+import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-preferiti',
@@ -16,7 +17,8 @@ export class PreferitiComponent {
 
 
   constructor(
-    private meteoSvc:MeteoService
+    private meteoSvc:MeteoService,
+    private authSvc:AuthService
   ){}
 
   ngOnInit(){
@@ -36,5 +38,9 @@ export class PreferitiComponent {
       this.cityArr = this.cityArr.filter(el=> el.id!=id)
       alert(`hai rimosso corettamente${name}`)
     })
+  }
+
+  logOut() {
+    this.authSvc.logOut()
   }
 }

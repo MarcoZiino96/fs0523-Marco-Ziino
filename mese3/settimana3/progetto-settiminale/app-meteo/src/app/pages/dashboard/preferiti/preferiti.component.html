@@ -2,6 +2,13 @@
 
 <div class="container">
 
+
+  <div class="text-end my-3 d-flex justify-content-around">
+    <button (click)="logOut()" class="btn btn-danger me-5">Logout</button>
+    <button rouuterLink="/dashboard"class="btn btn-info me-5">indietro</button>
+  </div>
+
+
   <div class="row ">
 
     <div class="col-12 col-md-6 col-lg-4 mb-2 background row" *ngFor="let c of cityArr">
