@@ -53,92 +53,6 @@
   "iLovecity": [
     {
       "coord": {
-        "lon": 8.9339,
-        "lat": 44.4073
-      },
-      "weather": [
-        {
-          "id": 801,
-          "main": "Clouds",
-          "description": "poche nuvole",
-          "icon": "02n"
-        }
-      ],
-      "base": "stations",
-      "main": {
-        "temp": 10.88,
-        "feels_like": 10.19,
-        "temp_min": 6.37,
-        "temp_max": 13.5,
-        "pressure": 1017,
-        "humidity": 83
-      },
-      "visibility": 10000,
-      "wind": {
-        "speed": 1.03,
-        "deg": 0
-      },
-      "clouds": {
-        "all": 20
-      },
-      "dt": 1702241691,
-      "sys": {
-        "type": 2,
-        "id": 2082763,
-        "country": "IT",
-        "sunrise": 1702190949,
-        "sunset": 1702223091
-      },
-      "timezone": 3600,
-      "id": 3176219,
-      "name": "Genova",
-      "cod": 200
-    },
-    {
-      "coord": {
-        "lon": 12.3908,
-        "lat": 43.1107
-      },
-      "weather": [
-        {
-          "id": 803,
-          "main": "Clouds",
-          "description": "nubi sparse",
-          "icon": "04n"
-        }
-      ],
-      "base": "stations",
-      "main": {
-        "temp": 4.69,
-        "feels_like": 3.54,
-        "temp_min": 2.91,
-        "temp_max": 7.27,
-        "pressure": 1018,
-        "humidity": 90
-      },
-      "visibility": 10000,
-      "wind": {
-        "speed": 1.54,
-        "deg": 340
-      },
-      "clouds": {
-        "all": 63
-      },
-      "dt": 1702245856,
-      "sys": {
-        "type": 2,
-        "id": 2006859,
-        "country": "IT",
-        "sunrise": 1702189853,
-        "sunset": 1702222526
-      },
-      "timezone": 3600,
-      "id": 3171180,
-      "name": "Perugia",
-      "cod": 200
-    },
-    {
-      "coord": {
         "lon": 12.1991,
         "lat": 44.4172
       },
@@ -224,6 +138,49 @@
       "timezone": 3600,
       "id": 2524245,
       "name": "Marsala",
+      "cod": 200
+    },
+    {
+      "coord": {
+        "lon": 12.4829,
+        "lat": 41.8933
+      },
+      "weather": [
+        {
+          "id": 803,
+          "main": "Clouds",
+          "description": "nubi sparse",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 11.17,
+        "feels_like": 9.33,
+        "temp_min": 7.32,
+        "temp_max": 13.67,
+        "pressure": 1018,
+        "humidity": 38
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 1.03,
+        "deg": 0
+      },
+      "clouds": {
+        "all": 75
+      },
+      "dt": 1702283177,
+      "sys": {
+        "type": 2,
+        "id": 2003164,
+        "country": "IT",
+        "sunrise": 1702276044,
+        "sunset": 1702309145
+      },
+      "timezone": 3600,
+      "id": 3169070,
+      "name": "Roma",
       "cod": 200
     }
   ]
