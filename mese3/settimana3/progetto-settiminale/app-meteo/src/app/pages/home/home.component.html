@@ -1,1 +1,50 @@
-<p>home works!</p>
+<!-- <div class="row">
+
+  <div class="col-12 col-md-6 col-lg-4 mb-2 row background" *ngFor="let c of arrCity">
+
+    <div class="card p-3">
+
+      <div class="row">
+
+        <div class="col-6 text">
+          <div class="col-12">
+            <h5 class="card-title fw-bold">{{c.name}}</h5>
+            <p class="card-text fw-bold">{{c.sys.country}}</p>
+            <p class="card-text mb-1">
+              <button (click)="add()" class="btn btn-danger p-1"><i class="bi bi-balloon-heart fs-6"></i></button>
+            </p>
+          </div>
+          <div class="col-12">
+            <p class="card-text fw-semibold">{{c.weather[0].description}}</p>
+          </div>
+        </div>
+
+        <div class="col-6 img">
+          <img [srcset]="iconUrl+c.weather[0].icon+'.png'" class="card-img-top img-fluid" alt="iconWeather">
+        </div>
+
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12 mb-3">
+              <div class="row">
+                <div class="col-4"><span class="card-text bg-tertiary fw-semibold">Temp:{{c.main.temp}}°</span></div>
+                <div class="col-4"><span class="card-text bg-tertiary fw-semibold">Min:{{c.main.temp_min}}°</span></div>
+                <div class="col-4"><span class="card-text bg-tertiary fw-semibold">Max:{{c.main.temp_max}}°</span></div>
+              </div>
+            </div>
+
+            <div class="col-6 ">
+              <p class="card-text fw-semibold">💧Umidità:{{c.main.humidity}}%</p>
+            </div>
+            <div class="col-6  ">
+              <p class="card-text fw-semibold">🌪:{{c.wind.speed}}m/s</p>
+            </div>
+          </div>
+        </div>
+        <a [routerLink]="['/dashboard/fiveWeather',c.id]" class="btn btn-info text-white fw-bold">Scopri di più</a>
+
+      </div>
+    </div>
+  </div>
+
+</div>-->

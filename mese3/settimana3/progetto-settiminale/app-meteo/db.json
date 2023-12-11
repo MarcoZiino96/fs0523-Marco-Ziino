@@ -41,20 +41,190 @@
       "nome": "isabella",
       "cognome": "trischitta",
       "id": 6
+    },
+    {
+      "email": "marcoziino16@gmail.com",
+      "password": "$2a$10$HvcTjOFiSQdH00CL2wo0le2Tl7Dl3P/ty9kOU5uNJYMh1K5BRzf4q",
+      "nome": "MARCO",
+      "cognome": "ZIINO",
+      "id": 7
     }
   ],
   "iLovecity": [
     {
-      "id": 1
+      "coord": {
+        "lon": 8.9339,
+        "lat": 44.4073
+      },
+      "weather": [
+        {
+          "id": 801,
+          "main": "Clouds",
+          "description": "poche nuvole",
+          "icon": "02n"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 10.88,
+        "feels_like": 10.19,
+        "temp_min": 6.37,
+        "temp_max": 13.5,
+        "pressure": 1017,
+        "humidity": 83
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 1.03,
+        "deg": 0
+      },
+      "clouds": {
+        "all": 20
+      },
+      "dt": 1702241691,
+      "sys": {
+        "type": 2,
+        "id": 2082763,
+        "country": "IT",
+        "sunrise": 1702190949,
+        "sunset": 1702223091
+      },
+      "timezone": 3600,
+      "id": 3176219,
+      "name": "Genova",
+      "cod": 200
     },
     {
-      "id": 2
+      "coord": {
+        "lon": 12.3908,
+        "lat": 43.1107
+      },
+      "weather": [
+        {
+          "id": 803,
+          "main": "Clouds",
+          "description": "nubi sparse",
+          "icon": "04n"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 4.69,
+        "feels_like": 3.54,
+        "temp_min": 2.91,
+        "temp_max": 7.27,
+        "pressure": 1018,
+        "humidity": 90
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 1.54,
+        "deg": 340
+      },
+      "clouds": {
+        "all": 63
+      },
+      "dt": 1702245856,
+      "sys": {
+        "type": 2,
+        "id": 2006859,
+        "country": "IT",
+        "sunrise": 1702189853,
+        "sunset": 1702222526
+      },
+      "timezone": 3600,
+      "id": 3171180,
+      "name": "Perugia",
+      "cod": 200
     },
     {
-      "id": 3
+      "coord": {
+        "lon": 12.1991,
+        "lat": 44.4172
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "cielo coperto",
+          "icon": "04n"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 3.72,
+        "feels_like": 2.5,
+        "temp_min": 2.95,
+        "temp_max": 12,
+        "pressure": 1014,
+        "humidity": 73,
+        "sea_level": 1014,
+        "grnd_level": 1013
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 1.49,
+        "deg": 185,
+        "gust": 4.35
+      },
+      "clouds": {
+        "all": 97
+      },
+      "dt": 1702262401,
+      "sys": {
+        "type": 1,
+        "id": 6756,
+        "country": "IT",
+        "sunrise": 1702276620,
+        "sunset": 1702308705
+      },
+      "timezone": 3600,
+      "id": 3169561,
+      "name": "Ravenna",
+      "cod": 200
     },
     {
-      "id": 4
+      "coord": {
+        "lon": 12.4342,
+        "lat": 37.7979
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo sereno",
+          "icon": "01n"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 13.97,
+        "feels_like": 13.88,
+        "temp_min": 13.97,
+        "temp_max": 13.97,
+        "pressure": 1019,
+        "humidity": 94
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 2.57,
+        "deg": 30
+      },
+      "clouds": {
+        "all": 0
+      },
+      "dt": 1702262430,
+      "sys": {
+        "type": 1,
+        "id": 6714,
+        "country": "IT",
+        "sunrise": 1702275323,
+        "sunset": 1702309889
+      },
+      "timezone": 3600,
+      "id": 2524245,
+      "name": "Marsala",
+      "cod": 200
     }
   ]
 }

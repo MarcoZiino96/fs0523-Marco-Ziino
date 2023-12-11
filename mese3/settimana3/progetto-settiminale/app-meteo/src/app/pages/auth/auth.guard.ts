@@ -27,7 +27,13 @@ export class AuthGuard {
   canActivateChild(
     childRoute: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
-  }
+      return this.auth.isLog$.pipe(map(isLog => {
+        if(!isLog) this.router.navigate(['/auth/login']);
+
+        return isLog
+      }))
+
+    }
+
 
 }

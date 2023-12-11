@@ -24,7 +24,9 @@ ngOnInit(){
   this.route.params.subscribe((params:any) =>{
      this.meteoSvc.getIdByFiveDay(params.id).subscribe(( res=>{
 
-      return this.cityArr= res
+      return console.log(this.cityArr= res);
+
+
 
      }))
   })

@@ -10,28 +10,29 @@ import { Coord, ICurrentDayForecast } from '../../Models/i-current-day-forecast'
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
-  city!:string;
-  cityLove!:ICurrentDayForecast
-  arrCity:ICurrentDayForecast[]=[];
-  iconUrl:string="https://openweathermap.org/img/wn/"
+  city!: string;
+  cityLove!: ICurrentDayForecast
+  arrCity: ICurrentDayForecast[] = [];
+  iconUrl: string = "https://openweathermap.org/img/wn/"
 
-  coord:Coord={
+  coord: Coord = {
     lat: 0,
     lon: 0
   }
 
   constructor(
     private authSvc: AuthService,
-    private meteoSvc:MeteoService
-    ){}
+    private meteoSvc: MeteoService
+  ) { }
 
 
 
-  getActualMeteoCard(){
 
-     this.meteoSvc.getLatLon(this.city).subscribe(data =>{
+  getActualMeteoCard() {
 
-      data.forEach(c =>{
+    this.meteoSvc.getLatLon(this.city).subscribe(data => {
+
+      data.forEach(c => {
         this.coord.lat = c.lat;
         this.coord.lon = c.lon;
         this.meteoSvc.getCityMeteo(this.coord).subscribe(data => {
@@ -42,16 +43,26 @@ export class DashboardComponent {
   }
 
   add() {
-    this.meteoSvc.addILoveCity(this.cityLove).subscribe((data) => {
-      console.log(data);
-  })
-}
+    this.meteoSvc.getLatLon(this.city).subscribe(data => {
+      data.forEach(c => {
+        this.coord.lat = c.lat;
+        this.coord.lon = c.lon;
+        this.meteoSvc.getCityMeteo(this.coord).subscribe(data => {
+          this.meteoSvc.addILoveCity(data).subscribe((d) => {
+            alert(`hai aggiunto correttamente ${d.name} ai preferiti`)
+          })
+        })
+      })
+
+    })
 
 
-  logOut(){
+  }
+
+  logOut() {
     this.authSvc.logOut()
   }
 
-
-
 }
+
+

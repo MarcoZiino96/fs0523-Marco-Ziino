@@ -1,28 +1,55 @@
-<div class="conteiner">
-  <h3 class="text-center my-5 fw-bold">{{cityArr.city.name}}</h3>
 
-  <table class="table">
-    <thead>
-      <th>Data e Ora</th>
-      <th></th>
-      <th>Descrizione</th>
-      <th>Temp°</th>
-      <th>Min°</th>
-      <th>Max°</th>
-      <th>Umidità %</th>
-      <th>Vento m/s</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let d of cityArr.list;">
-        <td>{{d.dt_txt|date:'dd-MM / HH:mm'}}</td>
-        <th> <img [srcset]="iconUrl+d.weather[0].icon+'.png'" class="card-img-top img-fluid" alt="iconWeather"></th>
-        <td>{{d.weather[0].description}}</td>
-        <td>{{d.main.temp}}°</td>
-        <td>{{d.main.temp_min}}°</td>
-        <td>{{d.main.temp_max}}°</td>
-        <td>{{d.main.humidity}}%</td>
-        <td>{{d.wind.speed}} m/s</td>
-      </tr>
-    </tbody>
-  </table>
+
+
+<div class="container mt-5">
+
+
+  <div class="row ">
+
+    <div class="col-12 col-md-6 col-lg-4 mb-2 background row" *ngFor="let c of cityArr.list">
+
+      <div class="card p-3">
+
+        <div class="row">
+
+          <div class="col-6 text">
+            <div class="col-12">
+              <h5 class="card-title fw-bold">{{cityArr.city.name}}</h5>
+              <p class="card-text fw-bold">{{c.dt_txt|date:'dd-MM / HH:mm'}}</p>
+            </div>
+            <div class="col12">
+              <p class="card-text fw-semibold">{{c.weather[0].description}}</p>
+            </div>
+          </div>
+
+          <div class="col-6 img">
+            <img [srcset]="iconUrl+c.weather[0].icon+'.png'" class="card-img-top img-fluid" alt="iconWeather">
+          </div>
+
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 mb-3">
+                <div class="row">
+                  <div class="col-4"><span class="card-text bg-tertiary fw-semibold">Temp:{{c.main.temp}}°</span></div>
+                  <div class="col-4"><span class="card-text bg-tertiary fw-semibold">Min:{{c.main.temp_min}}°</span>
+                  </div>
+                  <div class="col-4"><span class="card-text bg-tertiary fw-semibold">Max:{{c.main.temp_max}}°</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 ">
+                <p class="card-text fw-semibold">💧Umidità:{{c.main.humidity}}%</p>
+              </div>
+              <div class="col-6  ">
+                <p class="card-text fw-semibold">🌪:{{c.wind.speed}}m/s</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </div>
