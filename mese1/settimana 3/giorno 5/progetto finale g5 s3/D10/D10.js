@@ -319,6 +319,19 @@ const  movies = [
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 
+function deleteProp(obj, prop){
+ delete obj[prop];
+  return obj
+}
+
+const myObject = {
+  name: "John",
+  age: 30,
+  job: "developer"
+};
+
+console.log(deleteProp(myObject, "age"));
+
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
@@ -376,6 +389,24 @@ function searchByTitle(string){
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+
+function searchAndDivine(string){
+
+  let obj ={
+    matchs:[],
+    unMatchs:[]
+  }
+
+  movies.forEach(movie => {
+    if(movie.Title.includes(string)){
+      obj.matchs.push(movie)
+    } else{
+      obj.unMatchs.push(movie)
+    }
+  })
+  return obj;
+}
+console.log(searchAndDivine("Avengers"));
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
@@ -460,6 +491,14 @@ function addtr() {
 
 */
 
+function halfTree(n){
+
+  for (let index = 0; index <= n; index++) {
+    console.log('*'.repeat(index)); 
+  }
+}
+halfTree(5)
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -472,6 +511,25 @@ function addtr() {
 
 */
 
+
+  function tree(height) {
+    for (let i = 1; i <= height; i++) {
+        let row = '';
+      
+        for (let j = 0; j < height - i; j++) {
+            row += '-';
+        }
+     
+        for (let k = 0; k < 2 * i - 1; k++) {
+            row += '*';
+        }
+        console.log(row);
+    }
+
+    
+}
+
+tree(10);
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
