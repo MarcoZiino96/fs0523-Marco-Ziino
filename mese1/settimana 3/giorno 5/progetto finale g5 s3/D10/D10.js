@@ -111,6 +111,11 @@ function onlyletters(string) {
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+function isThisEmail(string){
+  const reg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return reg.test(string);
+}
+console.log(isThisEmail("marcoggsdjsds.com"));
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
@@ -129,21 +134,65 @@ function whatDayIsIt() {
   Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
   il suo valore deve rappresentare il totale di tutti i valori estratti con le invocazioni di dice().
   L'oggetto ritornato deve anche contenere una proprietà "values", contenente un array con tutti i valori estratti dalle invocazioni di dice().
-
-  Example:
-  rollTheDices(3) => ritorna {
-      sum: 10
-      values: [3, 3, 4]
-  }
 */
+
+function rollTheDice(n){
+  
+  let values = [];
+
+  let sum = 0;
+
+  for (let index = 0; index < n; index++) {
+
+    let roll = dice();
+
+    values.push(roll);
+    sum += roll;
+  }
+
+  return{
+    values: values,
+    sum: sum
+  }
+
+
+
+}
+
+console.log(rollTheDice(5));
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
+function howManyDays(date){
+  const inputDate = new Date(date);
+  const currentDate = new Date();
+  const millesimalDiff = currentDate - inputDate;
+  const diffDay =Math.floor(millesimalDiff /(1000 * 60 * 60 * 24)) ;
+   return diffDay;
+}
+
+console.log(howManyDays("2024-05-25"));   
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+
+function isTodayMyBirthday(string){
+
+  let birthDay = new Date(string);
+
+  let monthBirthDay = birthDay.getMonth() + 1;
+  let dayBirthDay = birthDay.getDate();
+
+  let currentDate = new Date();
+
+  let currentMonth = currentDate.getMonth() + 1;
+  let currentDay = currentDate.getDate();
+
+  return (monthBirthDay === currentMonth && dayBirthDay === currentDay) ? true : false;
+} 
+console.log(isTodayMyBirthday("2024-05-27"));
 
 // Arrays & Oggetti
 
