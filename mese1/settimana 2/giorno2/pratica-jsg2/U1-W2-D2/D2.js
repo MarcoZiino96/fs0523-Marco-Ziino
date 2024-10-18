@@ -114,15 +114,7 @@ if (totalShoppingCart2 < 50)
 }
 */  
 
-function orderArrayNumber(arr){
-  arr.sort((x,y) => y-x);
-  return arr;
-}
 
-let arrNumber = [50,2,30,4,5,7,11,22,33,44,5,6,7];
-
-let arrNumberOrder = orderArrayNumber(arrNumber);
-console.log(arrNumberOrder);
 
 
 

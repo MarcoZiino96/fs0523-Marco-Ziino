@@ -26,9 +26,8 @@ se dobbiamo indicare un mumero decimale bisogna contrassegnarlo con il punto "."
  Crea una variable chiamata "name" e assegna ad essa il tuo nome, sotto forma di stringa.
 */
 
-let name;
-name="Marco"
-console.log(name)
+let nome = "Marco";
+console.log(nome)
 
 /* ESERCIZIO 3
  Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
@@ -57,8 +56,8 @@ console.log(name1);
 name1="ziino"
 console.log(name1)*/
 
-name="ziino"
-console.log(name);
+nome="ziino"
+console.log(nome);
 
 /* ESERCIZIO 6
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
@@ -72,5 +71,15 @@ console.log(x);
  EXTRA: verifica che la loro uguaglianza diventi true se entrambe vengono trasformate in lowercase (senza cambiare il valore di name2!).
 */
 
-  Function
+  function notEqualsStrng( x, y){
+    if( typeof x === 'string' &&  typeof  y === "string"){
+      return x != y
+    }else{
+      return "uno dei due params non è di tipo string"
+    }
+  }
 
+  console.log(notEqualsStrng("alla faccia", "alla tua"));
+  console.log(notEqualsStrng("alla faccia", "alla faccia"));
+  console.log(notEqualsStrng("alla faccia", 5));
+  

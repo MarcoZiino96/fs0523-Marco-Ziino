@@ -5,6 +5,7 @@ let apiKey = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRlMDVjYz
 /* funzione asincrona che mi permette di effetuare una chiamata fetch method get, che tramite un ciclo e la funzione precedentemente creata 'getCloneCard' mi creo una card per ogni prodotto presente nel array data */
 
 async function productCard() {
+
     let resp = await fetch(fetchUrl, {
         headers: {
             Authorization: apiKey
@@ -37,10 +38,6 @@ async function productCard() {
         btnModifica.href = 'backOffice.html?id=' + p._id;
     
     areaCard.append(cloneCard);
-
-    
-    
-
 })
 
 }

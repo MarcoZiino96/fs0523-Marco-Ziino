@@ -27,7 +27,7 @@ async function loadImg() {
 async function loadImg2() {
     let resp = await fetch(query2, {
         headers :{
-            'authorization': `${apiKey}`
+            authorization : apiKey
         }
     } );
 

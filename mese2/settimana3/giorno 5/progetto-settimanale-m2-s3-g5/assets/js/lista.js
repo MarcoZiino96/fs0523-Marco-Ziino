@@ -40,7 +40,7 @@ async function productList() {
         /*evento che mi fa eliminare il prodotto con il metodo delete */ 
         btnDelete.addEventListener('click', async () => {
             
-            await deleteCard();
+          await deleteCard();
           async function deleteCard(){
              await fetch(fetchUrl + p._id, {
               method: 'DELETE',

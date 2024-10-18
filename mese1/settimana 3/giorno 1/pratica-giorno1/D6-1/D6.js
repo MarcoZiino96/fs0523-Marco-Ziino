@@ -1,7 +1,7 @@
-/* ESERCIZIO 1
+ /*   /* ESERCIZIO 1
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
-*/
+
 function concatstring(string1,string2) {
 
    let newstring = 0;
@@ -12,15 +12,15 @@ function concatstring(string1,string2) {
    return finalstring.toUpperCase()
 }console.log(concatstring('ciao', 'ciao'));
 
- 
+*/ 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */ function givemerandom(n) {
   let numberrandom = [];
-  for (let i = 0; i < 10; i++) {
-    numberrandom.push(Math.floor(Math.random() * 101)) 
+  for (let i = 0; i < n; i++) {
+    numberrandom.push(Math.floor(Math.random() * 101))  
   }  return numberrandom
-} console.log(givemerandom());
+} console.log(givemerandom(5));
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
@@ -39,7 +39,8 @@ function concatstring(string1,string2) {
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
-function somma2(...number) {
+
+function somma2(number) {
   let sommnumber = 0;
   sommnumber = number.reduce((p,c) => p + c);
   return sommnumber
@@ -238,4 +239,13 @@ console.log(searchimbdID(movies, 'tt2395427'));
 */
 function searchyear(array, anno) {
   return array.findIndex(element => element.Year === anno); 
-}console.log(searchyear(movies, '2019'));
+}console.log(searchyear(movies, '2019')); 
+
+const num = "5";
+const num1 = 1;
+const num2 = 5;
+
+console.log(num != num2);
+console.log(num !== num2);
+
+   

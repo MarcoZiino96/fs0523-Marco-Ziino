@@ -536,4 +536,4 @@ tree(10);
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
-
+console.log(Math.sqrt(2));
