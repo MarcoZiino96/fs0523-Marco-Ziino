@@ -83,7 +83,7 @@ if (totalShoppingCart2 < 50)
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
   Alla fine mostra il risultato in console.
-*/
+
 {
   let x = 16;
   let z = 17;
@@ -112,7 +112,18 @@ if (totalShoppingCart2 < 50)
     } 
   }  
 }
-  
+*/  
+
+function orderArrayNumber(arr){
+  arr.sort((x,y) => y-x);
+  return arr;
+}
+
+let arrNumber = [50,2,30,4,5,7,11,22,33,44,5,6,7];
+
+let arrNumberOrder = orderArrayNumber(arrNumber);
+console.log(arrNumberOrder);
+
 
 
 
