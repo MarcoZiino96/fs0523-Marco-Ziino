@@ -1,128 +1,127 @@
 const starWarsCharacters = [
-    {
-      name: "Luke Skywalker",
-      height: 172,
-      mass: 277,
-      hair_color: "blond",
-      skin_color: "fair",
-      eye_color: "blue",
-      birth_year: "19BBY",
-      gender: "male"
-    },
-    {
-      name: "C-3PO",
-      height: 167,
-      mass: 75,
-      hair_color: "n/a",
-      skin_color: "gold",
-      eye_color: "yellow",
-      birth_year: "112BBY",
-      gender: "n/a"
-    },
-    {
-      name: "R2-D2",
-      height: 96,
-      mass: 32,
-      hair_color: "n/a",
-      skin_color: "white, blue",
-      eye_color: "red",
-      birth_year: "33BBY",
-      gender: "n/a"
-    },
-    {
-      name: "Darth Vader",
-      height: 202,
-      mass: 136,
-      hair_color: "none",
-      skin_color: "white",
-      eye_color: "yellow",
-      birth_year: "41.9BBY",
-      gender: "male"
-    },
-    {
-      name: "Leia Organa",
-      height: 150,
-      mass: 49,
-      hair_color: "brown",
-      skin_color: "light",
-      eye_color: "brown",
-      birth_year: "19BBY",
-      gender: "female"
-    },
-    {
-      name: "Owen Lars",
-      height: 178,
-      mass: 120,
-      hair_color: "brown, grey",
-      skin_color: "light",
-      eye_color: "blue",
-      birth_year: "52BBY",
-      gender: "male"
-    },
-    {
-      name: "Beru Whitesun lars",
-      height: 165,
-      mass: 75,
-      hair_color: "brown",
-      skin_color: "light",
-      eye_color: "blue",
-      birth_year: "47BBY",
-      gender: "female"
-    },
-    {
-      name: "R5-D4",
-      height: 97,
-      mass: 32,
-      hair_color: "n/a",
-      skin_color: "white, red",
-      eye_color: "red",
-      birth_year: "unknown",
-      gender: "n/a"
-    },
-    {
-      name: "Biggs Darklighter",
-      height: 183,
-      mass: 84,
-      hair_color: "black",
-      skin_color: "light",
-      eye_color: "brown",
-      birth_year: "24BBY",
-      gender: "male"
-    },
-    {
-      name: "Obi-Wan Kenobi",
-      height: 182,
-      mass: 77,
-      hair_color: "auburn, white",
-      skin_color: "fair",
-      eye_color: "blue-gray",
-      birth_year: "57BBY",
-      gender: "male"
-    }
-  ];
-  
-  /* ESERCIZIO 1
+  {
+    name: "Luke Skywalker",
+    height: 172,
+    mass: 277,
+    hair_color: "blond",
+    skin_color: "fair",
+    eye_color: "blue",
+    birth_year: "19BBY",
+    gender: "male",
+  },
+  {
+    name: "C-3PO",
+    height: 167,
+    mass: 75,
+    hair_color: "n/a",
+    skin_color: "gold",
+    eye_color: "yellow",
+    birth_year: "112BBY",
+    gender: "n/a",
+  },
+  {
+    name: "R2-D2",
+    height: 96,
+    mass: 32,
+    hair_color: "n/a",
+    skin_color: "white, blue",
+    eye_color: "red",
+    birth_year: "33BBY",
+    gender: "n/a",
+  },
+  {
+    name: "Darth Vader",
+    height: 202,
+    mass: 136,
+    hair_color: "none",
+    skin_color: "white",
+    eye_color: "yellow",
+    birth_year: "41.9BBY",
+    gender: "male",
+  },
+  {
+    name: "Leia Organa",
+    height: 150,
+    mass: 49,
+    hair_color: "brown",
+    skin_color: "light",
+    eye_color: "brown",
+    birth_year: "19BBY",
+    gender: "female",
+  },
+  {
+    name: "Owen Lars",
+    height: 178,
+    mass: 120,
+    hair_color: "brown, grey",
+    skin_color: "light",
+    eye_color: "blue",
+    birth_year: "52BBY",
+    gender: "male",
+  },
+  {
+    name: "Beru Whitesun lars",
+    height: 165,
+    mass: 75,
+    hair_color: "brown",
+    skin_color: "light",
+    eye_color: "blue",
+    birth_year: "47BBY",
+    gender: "female",
+  },
+  {
+    name: "R5-D4",
+    height: 97,
+    mass: 32,
+    hair_color: "n/a",
+    skin_color: "white, red",
+    eye_color: "red",
+    birth_year: "unknown",
+    gender: "n/a",
+  },
+  {
+    name: "Biggs Darklighter",
+    height: 183,
+    mass: 84,
+    hair_color: "black",
+    skin_color: "light",
+    eye_color: "brown",
+    birth_year: "24BBY",
+    gender: "male",
+  },
+  {
+    name: "Obi-Wan Kenobi",
+    height: 182,
+    mass: 77,
+    hair_color: "auburn, white",
+    skin_color: "fair",
+    eye_color: "blue-gray",
+    birth_year: "57BBY",
+    gender: "male",
+  },
+];
+
+/* ESERCIZIO 1
     Crea una variabile chiamata "characters" e assegnale un array vuoto
-  */
+  
 
     let characters = [];
+*/
 
-
-  
-  /* ESERCIZIO 2
+/* ESERCIZIO 2
     Utilizzando un ciclo for, cicla l'array "starWarsCharacters".
     Dovrai accedere alla proprietà "name" di ogni oggetto in esso contenuto, e inserirla nell'array "characters" creato precedentemente.
     Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
-   */
+   
  for (let i = 0; i < starWarsCharacters.length; i++) {
     characters.push(starWarsCharacters[i].name);
  }
  console.log(characters);
- 
-  
-  /* ESERCIZIO 3
+ */
+
+/* ESERCIZIO 3
     Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
-  *//**/
+  */ /*
  let femaleObject = [];
 
  for(let i = 0; i < starWarsCharacters.length; i++){
@@ -138,8 +137,8 @@ const starWarsCharacters = [
     })
 
  console.log(femaleObject);
-
-  /* ESERCIZIO 4
+*/
+/* ESERCIZIO 4
     Crea un oggetto "eyeColor" che abbia le seguenti proprietà: blue, yellow, brown, red, blue-gray.
     Ad ognuna di queste proprietà assegna come valore un array vuoto.
   */ /* ESERCIZIO 5
@@ -179,8 +178,8 @@ const starWarsCharacters = [
     })
 
     console.log(eyeColor);
-  */  
-  /* ESERCIZIO 6
+  */
+/* ESERCIZIO 6
     Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
   
  let crewMass = 0;
@@ -192,10 +191,7 @@ const starWarsCharacters = [
  }
 */
 
-
- 
-  
-  /* ESERCIZIO 7
+/* ESERCIZIO 7
     Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
   
     Se la massa è inferiore a 500 stampa in console: "Ship is under loaded"
@@ -221,8 +217,8 @@ const starWarsCharacters = [
  controlCrewMass(crewMass);
  
 */
-  
-  /* ESERCIZIO 8
+
+/* ESERCIZIO 8
     Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
   
 
@@ -232,12 +228,12 @@ const starWarsCharacters = [
         }
     }
     console.log(starWarsCharacters);
-  */  
-  
-  /* --EXTRA-- ESERCIZIO 9
+  */
+
+/* --EXTRA-- ESERCIZIO 9
     Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "characters" le stringhe corrispondenti a personaggi con lo stesso nome.
     Una volta fatto crea un console.log per controllare la proprietà length di "characters" prima e dopo l'operazione.
-*/  
+
 
     console.log(characters.length);
 
@@ -247,8 +243,8 @@ const starWarsCharacters = [
             characters.splice(index, 1);
         }    
     }
-    
-  /* --EXTRA-- ESERCIZIO 10
+    */
+/* --EXTRA-- ESERCIZIO 10
     Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
      {
       name: "Beru Whitesun lars",
@@ -260,7 +256,7 @@ const starWarsCharacters = [
       birth_year: "47BBY",
       gender: "female"
     },
-  */
+ 
 
     function casualObj(){
         let indexRamdom = Math.floor(Math.random() * characters.length + 1);
@@ -273,4 +269,28 @@ const starWarsCharacters = [
     }
 
     casualObj();
-  
+   
+    
+    var nome = function scope(){
+        var nome1= "u cazz"
+        var nome1 = "sta coppulazza"  
+      }
+    
+
+class persona {
+  constructor(nome, cognome) {
+    this.nome = nome;
+    this.cognome = cognome;
+  }
+  saluta() {
+    console.log(
+      "Ciao a tutti i mi chiamo " + `${this.nome}` + " " + `${this.cognome}`
+    );
+  }
+}
+
+const p = new persona("Marco", "Ziino");
+p.saluta();
+*/
+
+
