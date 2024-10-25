@@ -11,8 +11,6 @@ function recoursiveSum(array) {
   } else {
     let sum =
       array[array.length - 1] + recoursiveSum(array.slice(0, array.length - 1));
-    console.log(sum);
-
     return sum;
   }
 }
@@ -156,6 +154,71 @@ console.log(app2(arrBid));
  per evitare di ricalcolare con gli stessi argomenti.
   */
 
+ function slowFunction(num) {
+  console.log('Calcolando...');
+  return num * num;
+}
+
+ function memoize(fn){
+
+  const cache = new Map();
+
+  return function(...args){
+    const key = JSON.stringify(args);
+    
+  
+  if(cache.has(key)){
+    console.log("ritorno da cache");
+     return cache.get(key)
+    
+  }
+ 
+  const result = fn(...args);
+    cache.set(key, result);
+    console.log(cache);
+    
+    return result;
+  }
+}
+
+const memoizedSlowFunction = memoize(slowFunction);
+
+console.log(memoize(slowFunction)(5));
+console.log(memoize(slowFunction)(5));
+
+
+console.log(memoizedSlowFunction(5));
+console.log(memoizedSlowFunction(5));
+console.log(memoizedSlowFunction(10));
+console.log(memoizedSlowFunction(10));
+
+
+
+
 /*
  Descrizione: Crea una funzione getAllCombinations che generi tutte le combinazioni di una stringa di lunghezza variabile.
   */
+
+ function getAllCombinations(string){
+
+  let combinations =[];
+
+  function generateCombinations(prefix, remaining) {
+    
+  if(prefix){
+    combinations.push(prefix);
+    console.log(`Aggiunta combinazione: "${prefix}"`);
+  }
+  
+  for(let i = 0; i < remaining.length; i++){
+    generateCombinations(prefix + remaining[i], remaining.slice(i + 1));
+  }
+  
+  }
+   generateCombinations("", string);
+   return combinations;
+ }
+
+
+ console.log(getAllCombinations("abcdefg"));
+ 
