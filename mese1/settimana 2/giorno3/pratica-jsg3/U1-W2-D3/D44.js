@@ -3,11 +3,11 @@
  i suoi elementi in modo ricorsivo, senza utilizzare cicli for o while. 
  */
 
-let arrayNUmber = [1, 2, 3, 4, 5];
+let arrayNumber = [1, 2, 3, 4, 5,6];
 
-function recoursiveSum(array) {
+/*function recoursiveSum(array) {
   if (array.length === 0) {
-    return 0;
+    return ;
   } else {
     let sum =
       array[array.length - 1] + recoursiveSum(array.slice(0, array.length - 1));
@@ -15,8 +15,14 @@ function recoursiveSum(array) {
   }
 }
 
-console.log(recoursiveSum(arrayNUmber));
+ let recoursiveSum = (array, i=0 ) =>{
+  if(i >= array.length)
+    return 0;
+  return array[i] + recoursiveSum( array, i + 1);
+}
 
+console.log(recoursiveSum(arrayNumber, (i = 0)));
+*/
 /*
  Descrizione: Implementa una funzione customFilter che funzioni come l'array .filter(), ma senza usare il metodo .filter() nativo. La funzione accetta un array e una callback, restituendo un nuovo array 
  contenente solo gli elementi per i quali la callback restituisce true.
@@ -51,7 +57,7 @@ console.log(recoursiveSum(arrayNUmber));
 
 /* 
  Descrizione: Crea una funzione objectToQueryString che prenda un oggetto JavaScript e lo trasformi in una stringa di query URL.
- */
+ 
 
 function objectToQueryString(obj) {
   return Object.entries(obj)
@@ -66,11 +72,11 @@ const params = {
 };
 
 console.log(objectToQueryString(params));
-
+*/
 /*
  Descrizione: Scrivi una funzione wordFrequency che accetti una stringa e restituisca un oggetto con le parole come chiavi e il numero di occorrenze come valori. 
  Ignora maiuscole e minuscole e rimuovi la punteggiatura.
-  */
+  
 
 function wordFrequency(str) {
   let notPunt = str.replace(/[.,/#!$%^&*;:{}=\-_`~()]/g, "").toLowerCase();
@@ -92,11 +98,11 @@ console.log(
     "Ciao a tutti. Mi chiamo Marco ed ho 28 anni. Lo so i miei anni sono tanti, ma ancora mi senti giovane. Ciao a tutti di nuovo!"
   )
 );
-
+*/
 /*
  Descrizione: Dato un array che contiene numeri da 1 a n, in cui un numero è mancante, scrivi una funzione 
  findMissingNumber che trovi il numero mancante. 
- */
+ 
 
 function findMissingNUmber(arr) {
   let max = Math.max(...arr);
@@ -112,11 +118,11 @@ function findMissingNUmber(arr) {
 }
 
 console.log(findMissingNUmber([1, 2, 3, 4, 5, 6, 7, 9]));
-
+*/
 /* 
  Descrizione: Dato un array bidimensionale, scrivi una funzione che lo "appiattisca", 
  cioè trasformi tutte le sue righe in un unico array a una dimensione.
- */
+ 
 
 let arrBid = [
   [1, 2, 3],
@@ -147,12 +153,12 @@ console.log(appiatireBidimension(arrBid));
 console.log(arrPiatto);
 console.log(app2(arrBid));
 
-
+*/
 
 /*
  Descrizione: Crea una funzione memoize che accetti una funzione costosa e restituisca una nuova versione di essa che memorizza i risultati 
  per evitare di ricalcolare con gli stessi argomenti.
-  */
+  
 
  function slowFunction(num) {
   console.log('Calcolando...');
@@ -193,11 +199,11 @@ console.log(memoizedSlowFunction(10));
 console.log(memoizedSlowFunction(10));
 
 
-
+*/
 
 /*
  Descrizione: Crea una funzione getAllCombinations che generi tutte le combinazioni di una stringa di lunghezza variabile.
-  */
+ 
 
  function getAllCombinations(string){
 
@@ -221,4 +227,62 @@ console.log(memoizedSlowFunction(10));
 
 
  console.log(getAllCombinations("abcdefg"));
+  */
+ /*
+ Scrivi una funzione ricorsiva contaVocali(str) che conta il numero di vocali (a, e, i, o, u) in una stringa.
+  */
+
+
+ function contaVocali(string, i = 0, count = 0){  
+ if(i >= string.length){
+  return count;
+ }
+ if(string.charAt(i) === 'a' || string.charAt(i) === 'i' || string.charAt(i) === 'e' || string.charAt(i) === 'o' || string.charAt(i) === 'u'){
+  count ++;
+  }
+ return  contaVocali(string, i + 1, count)
+ }
+
+console.log(contaVocali('Java'));
+
+
+/*
+Scrivi una funzione ricorsiva minimoArray(arr) che trova il numero più piccolo in un array di numeri.
+*/
+
+function minArray(arr, i = 0, num = null){
+
+  if( arr.length === 0)
+    return null;
+
+  if(i >= arr.length){
+    return num;
+  }
+
+  if(arr[i] < num || num === null){
+    num = arr[i]
+  }
+  return minArray(arr, i + 1, num);
+}
+
+
+ console.log(minArray([-555,4,18,-625,-800,25,45,44,-600]));
  
+/*
+Scrivi una funzione ricorsiva numeroCifre(n) che prende un numero intero positivo n e restituisce il numero di cifre.
+ */
+
+function numCifre(n){ 
+  if(n === 0){
+    return 1;
+  }
+
+  if(n < 10){
+    return 1;
+  }
+  return 1 + numCifre(Math.floor(n / 10))
+}
+
+console.log(numCifre(123456));
+
+
