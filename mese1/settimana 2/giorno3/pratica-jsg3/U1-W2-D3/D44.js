@@ -283,6 +283,110 @@ function numCifre(n){
   return 1 + numCifre(Math.floor(n / 10))
 }
 
-console.log(numCifre(123456));
+console.log(numCifre(11212121212121212121));
 
 
+/*
+Scrivi una funzione ricorsiva fattoriale(n) che calcola il fattoriale di un numero n (cioè n * (n-1) * ... * 1).
+ */
+
+function fattorialeN(n){
+  if(n === 0)
+    return 1;
+
+  return n * fattorialeN(n-1)
+}
+  /*
+  Scrivi una funzione ricorsiva fibonacci(n) che restituisce il numero di Fibonacci alla posizione n.
+   */
+
+  function fibonacci(n,  i = 0){
+    if(n <= 1){
+      return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+
+  }
+
+  function sequenceFibonacci(n, sequence = [0, 1]){
+
+    if(sequence.length > n){
+      return sequence.slice(0, n + 1);
+    }
+
+    sequence.push(sequence[sequence.length - 1] + sequence[sequence.length -2])
+    return sequenceFibonacci(n, sequence)
+  }
+
+  console.log(sequenceFibonacci(10));
+  
+  
+/*
+Scrivi una funzione ricorsiva palindroma(str) che determina se una stringa str è palindroma (cioè si legge allo stesso modo sia da sinistra che da destra).
+ */
+
+function palindromString(str){
+  if(str.length <= 1){
+    return true;
+  }
+
+  if(str[0] !== str[str.length -1]){
+    return false;
+  }
+  return palindromString(str.slice(1, str.length - 1));
+}
+  
+console.log(palindromString("ro"));
+console.log(palindromString("javascript"));
+
+/*
+Scrivi una funzione ricorsiva potenza(base, esponente) che calcola base elevato a esponente. Non usare l'operatore ** o Math.pow.
+*/
+
+function esponente(n, e){
+
+  if(e === 0){
+    return 1;  
+  }if( n === 0){
+    return 0;
+  }
+
+  console.log(e);
+  
+  return n * esponente(n, e - 1)
+}
+
+console.log(esponente(2, 4));
+
+/* 
+9. Conta le lettere in una stringa
+Scrivi una funzione ricorsiva contaLettere(str, lettera) che conta quante volte appare una certa lettera in una stringa.
+*/
+
+function contaLettera(str, lettera, i = 0, count = 0){
+
+  if( i >= str.length){
+    return count;
+  }
+  if(str[i] === lettera){
+    count ++;
+  }
+  return contaLettera(str,lettera, i + 1, count)
+}
+
+console.log(contaLettera("ciaaaaaao", "a"));
+/* 
+0. Lunghezza di un array senza .length
+Scrivi una funzione ricorsiva lunghezzaArray(arr) che calcola la lunghezza di un array senza usare la proprietà .length.
+*/
+
+function lunghezzaArray(array, i = 0){
+  if(array[i] === undefined){
+    return i;  
+  }
+  return lunghezzaArray(array, i + 1)
+}
+
+
+
+console.log(lunghezzaArray([0,1,2,3,4,22,34,'s,','v']));
