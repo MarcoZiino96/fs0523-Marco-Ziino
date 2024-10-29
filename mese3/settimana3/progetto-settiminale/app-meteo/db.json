@@ -48,6 +48,13 @@
       "nome": "MARCO",
       "cognome": "ZIINO",
       "id": 7
+    },
+    {
+      "email": "Marcoziino16@gmail.com",
+      "password": "$2a$10$hxmFqjHtUzHMlpse8sV51O2adm2OZ1V5R28R7XaiCr4O3VbQfk4pO",
+      "nome": "Marco",
+      "cognome": "Ziino",
+      "id": 8
     }
   ],
   "iLovecity": [

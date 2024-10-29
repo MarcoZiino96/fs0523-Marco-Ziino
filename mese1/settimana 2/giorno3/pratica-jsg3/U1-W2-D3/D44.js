@@ -389,4 +389,14 @@ function lunghezzaArray(array, i = 0){
 
 
 
-console.log(lunghezzaArray([0,1,2,3,4,22,34,'s,','v']));
+
+function sommaArray( array, i = 0, sum = 0){
+
+  if(i >= array.length){
+    return 0;
+  }
+  return  array[i] + sommaArray(array, i + 1)
+}
+
+console.log(sommaArray([1,2,3,4,5]));
+
