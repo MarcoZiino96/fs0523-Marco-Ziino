@@ -1,30 +1,40 @@
-// inizio interazione js su HTML
+const creabutton = document.querySelector('#saveTask');
+const input = document.querySelector('#createTask');
+const textadd = document.querySelector('#textpushed');
+const textCompl = document.querySelector('#textComplete');
 
- const creabutton = document.querySelector('#saveTask');
- const input = document.querySelector('#createTask');
- const textadd = document.querySelector('#textpushed');
+creabutton.addEventListener('click', () => {
 
+    if (!input.value) {
+        alert('Inserisci un valore nella casella di testo');
+        return;
+    }
 
- creabutton.addEventListener('click', () => {
-   
-    if(!input.value) return;
-
+    // Crea l'elemento della lista e il bottone "delete"
     const li = document.createElement('li');
-    li.innerText = input.value;
-    li.addEventListener('click', () =>{
-    li.style.textDecoration = 'line-through'
-    li.innerText += ' Completato'
-    li.style.color = 'red'
-})
-const buttondelete = document.createElement('button')
-      buttondelete.innerText = 'delete'
-buttondelete.addEventListener('click', () =>{  
-    li.remove();
-    buttondelete.remove()
-})
+    const buttonDelete = document.createElement('button');
+    buttonDelete.innerText = 'delete';
 
-    textadd.append(li);
-    textadd.append(buttondelete)
-    input.value = ''; 
- })
- 
+    // Imposta il testo dell'elemento `li` e aggiungi il bottone "delete"
+    li.innerText = input.value;
+    li.appendChild(buttonDelete);
+
+    // Aggiungi l'elemento `li` alla lista delle attività da fare
+    textadd.appendChild(li);
+
+    // Aggiungi l'evento "click" per segnare il task come completato
+    li.addEventListener('click', () => {
+            li.style.color = 'red';
+            textCompl.appendChild(li); // Sposta nella lista completata
+   
+    });
+
+    // Aggiungi l'evento "click" per eliminare l'elemento della lista
+    buttonDelete.addEventListener('click', (event) => {
+        event.stopPropagation(); // Previene il trigger dell'evento di completamento
+        li.remove(); // Rimuove l'elemento `li`
+    });
+
+    // Svuota l'input
+    input.value = '';
+});
