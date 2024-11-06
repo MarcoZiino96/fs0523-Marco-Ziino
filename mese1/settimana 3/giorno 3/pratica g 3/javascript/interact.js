@@ -35,6 +35,6 @@ creabutton.addEventListener('click', () => {
         li.remove(); // Rimuove l'elemento `li`
     });
 
-    // Svuota l'input
+
     input.value = '';
 });
