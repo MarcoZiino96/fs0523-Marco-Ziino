@@ -6,6 +6,7 @@ let areanumber = document.querySelector('#areanumber');
 let areaScheda = document.querySelector('.containerScheda');
 let numberSchede = document.querySelector('input');
 let buttonScheda = document.querySelector('.buttonScheda');
+let numberScheda = [...Array(90).keys().map( i => i + 1)];
 
 let numeriEstratti = [];
 
@@ -14,7 +15,8 @@ generaTabella();
 buttonScheda.addEventListener('click',() =>{
   if(!numberSchede.value){
     alert('Inserisci un numero')
-    return};
+    return
+  }
     generaScheda(numberSchede.value);
 })
 
@@ -28,27 +30,34 @@ for (let i = 1; i <= 90; i++) {
 }
 };
 
+function shuffle(arr){
+  for(let i = arr.length -1; i > 0 ; i --){
+    const j = Math.floor(Math.random() * (i + 1));
+     [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr
+}
 
 function generaScheda(n) {
+  let array = [...Array(90).keys().map( i => i + 1)];
 
-  let numberScheda = [];
+  for(let i = 0; i < n; i ++){
+    let scheda = document.createElement('div');
+    scheda.classList.add('scheda');
 
-  for (let i = 0; i < n; i++) {
-      let scheda = document.createElement('div');
-      scheda.classList.add('scheda');
-      for (let y = 1; y <= 24; y++){  
-        let casella = document.createElement('div');
-        let numCorrent = Math.floor(Math.random()* 90) + 1;      
-        while(numberScheda.includes(numCorrent)){
-          numCorrent = Math.floor(Math.random()* 90) + 1;
-        } 
-        numberScheda.push(numCorrent)
-        casella.innerText = numCorrent;
-        casella.classList.add('numberScheda'); 
-        scheda.append(casella); 
-      } 
-      areaScheda.append(scheda);          
+    let numberScheda = shuffle(array).slice(0, 24);
+
+    numberScheda.forEach( num =>{
+       let casella = document.createElement('div');
+
+       casella.innerText = num;;
+       casella.classList.add('numberScheda');
+       scheda.append(casella);
+    })
+
+    areaScheda.append(scheda);
   }
+
   };
 
 bottone.addEventListener('click', () =>{
